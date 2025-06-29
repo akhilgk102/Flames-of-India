@@ -1544,7 +1544,7 @@ div#expand1{
     margin-top: 80px;
 }
 #home2-services-sec{
- background-image: url(../images/Homepage2/services-1.png);
+ background-image: url(./index/choose.jpg);
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
@@ -1583,7 +1583,7 @@ div#expand1{
     margin-top: 40px;
 }
 #home2-testimonials-sec{
-   background-image: url(../images/Homepage2/testimonial-1.png);
+   background-image: url(./index/review.jpg);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;

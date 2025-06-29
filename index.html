@@ -7,8 +7,10 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bermiz</title>
+	<title>Flames of India</title>
 	<link rel="icon" href="https://up2client.com/envato/bermiz-restaurant/main-file/assets/images/favicon/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link href="./Bermiz_files/css2" rel="stylesheet">
 	<link href="./Bermiz_files/css2(1)" rel="stylesheet">
 	<link rel="stylesheet" href="./Bermiz_files/all.min.css">
@@ -41,18 +43,196 @@
 				</div>
 			</div>
 		</div>
-		<!-- Preloader Start -->
-		<div id="overlayer" style="display: none;">
-			<div id="spinner" style="display: none;">
-				<svg class="spinner-webkit" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 54 54">
-					<path
-						d="M28.14,44a3.26,3.26,0,0,1,.53,1.63l.3,4.93a1.42,1.42,0,0,0,1.66,1.31A25.85,25.85,0,0,0,52.18,26.38v0A25.84,25.84,0,1,0,22.05,51.83a1.43,1.43,0,0,0,1.66-1.31L24,45.6a3.74,3.74,0,0,1,1.7-2.84l6.52-5.18a7.06,7.06,0,0,0,2.61-5.71L33.43,9.11A.16.16,0,0,0,33.26,9L32.18,9A1.4,1.4,0,0,0,30.9,10.4v15a1.46,1.46,0,0,1-1.46,1.46h0A1.46,1.46,0,0,1,28,25.45V10.79a1.65,1.65,0,0,0-1.65-1.65h0a1.65,1.65,0,0,0-1.65,1.65V25.45a1.46,1.46,0,0,1-1.46,1.46h0a1.46,1.46,0,0,1-1.46-1.46v-15A1.4,1.4,0,0,0,20.5,9L19.42,9a.16.16,0,0,0-.17.15L17.84,31.87a7.06,7.06,0,0,0,2.61,5.71l5.89,4.68">
-					</path>
-				</svg>
-				<div class="spinner-ie"></div>
+
+		<!-- Add this HTML right after your opening <body> tag -->
+		<div class="preloader" id="preloader">
+			<div class="loader-container">
+				<div class="spinner"></div>
+				<div class="spinner"></div>
+				<div class="spinner"></div>
+			</div>
+			<!-- <div class="loading-text">
+        <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+    </div> -->
+			<div class="progress-bar">
+				<div class="progress"></div>
 			</div>
 		</div>
-		<!-- Preloader End -->
+
+		<!-- Add this CSS to your stylesheet or in <style> tags in your <head> -->
+		<style>
+			.preloader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #0b1315;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+				transition: all 0.8s ease-in-out;
+			}
+
+			.preloader.hidden {
+				opacity: 0;
+				transform: translateY(-100%);
+				pointer-events: none;
+			}
+
+			.loader-container {
+				position: relative;
+				width: 120px;
+				height: 120px;
+				margin-bottom: 30px;
+			}
+
+			.spinner {
+				position: absolute;
+				border: 3px solid rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+				border-top: 3px solid #ffffff;
+				animation: spin 1s linear infinite;
+			}
+
+			.spinner:nth-child(1) {
+				width: 100%;
+				height: 100%;
+			}
+
+			.spinner:nth-child(2) {
+				width: 80%;
+				height: 80%;
+				top: 10%;
+				left: 10%;
+				border-top: 3px solid #ffd700;
+				animation-duration: 0.8s;
+			}
+
+			.spinner:nth-child(3) {
+				width: 60%;
+				height: 60%;
+				top: 20%;
+				left: 20%;
+				border-top: 3px solid #ff6b6b;
+				animation-duration: 0.6s;
+			}
+
+			.loading-text {
+				font-size: 24px;
+				font-weight: 300;
+				color: white;
+				letter-spacing: 3px;
+				margin-bottom: 20px;
+			}
+
+			.loading-text span {
+				display: inline-block;
+				animation: bounce 1.4s ease-in-out infinite both;
+			}
+
+			.loading-text span:nth-child(1) {
+				animation-delay: -0.32s;
+			}
+
+			.loading-text span:nth-child(2) {
+				animation-delay: -0.16s;
+			}
+
+			.loading-text span:nth-child(3) {
+				animation-delay: 0s;
+			}
+
+			.loading-text span:nth-child(4) {
+				animation-delay: 0.16s;
+			}
+
+			.loading-text span:nth-child(5) {
+				animation-delay: 0.32s;
+			}
+
+			.loading-text span:nth-child(6) {
+				animation-delay: 0.48s;
+			}
+
+			.loading-text span:nth-child(7) {
+				animation-delay: 0.64s;
+			}
+
+			.progress-bar {
+				width: 300px;
+				height: 4px;
+				background: rgba(255, 255, 255, 0.2);
+				border-radius: 2px;
+				overflow: hidden;
+			}
+
+			.progress {
+				height: 100%;
+				background: linear-gradient(90deg, #ffd700, #ff6b6b, #ffffff);
+				border-radius: 2px;
+				animation: progress 3s ease-in-out infinite;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes bounce {
+
+				0%,
+				80%,
+				100% {
+					transform: scale(0);
+					opacity: 0.5;
+				}
+
+				40% {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+
+			@keyframes progress {
+				0% {
+					width: 0%;
+				}
+
+				50% {
+					width: 70%;
+				}
+
+				100% {
+					width: 100%;
+				}
+			}
+		</style>
+
+		<!-- Add this JavaScript before your closing </body> tag -->
+		<script>
+			window.addEventListener('load', function () {
+				const preloader = document.getElementById('preloader');
+
+				// Add a minimum loading time for better UX
+				setTimeout(() => {
+					preloader.classList.add('hidden');
+
+					// Remove preloader from DOM after animation
+					setTimeout(() => {
+						preloader.remove();
+					}, 800);
+				}, 3500); // Adjust timing as needed
+			});
+		</script>
+
 		<!-- Header Section Start -->
 		<header id="homepage2-header2" class="fixed">
 			<div class="homepage2-header2full">
@@ -383,15 +563,15 @@
 			<div class="container">
 				<div class="home2-hero-section-full">
 					<div class="home2-hero-top-sec">
-						<h1 class="home2-hero-txt1  wow fadeInDown" data-wow-duration="1s" data-wow-delay="3s"
+						<h1 class="home2-hero-txt1  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s"
 							style="visibility: visible; animation-duration: 1s; animation-delay: 3s; animation-name: fadeInDown;">
 							Where every bite ignites.</h1>
-						<p class="home2-hero-txt2 wow fadeInDown" data-wow-duration="1.6s" data-wow-delay="3.1s"
+						<p class="home2-hero-txt2 wow fadeInDown" data-wow-duration="1.6s" data-wow-delay="1s"
 							style="visibility: visible; animation-duration: 1.6s; animation-delay: 3.1s; animation-name: fadeInDown;">
 							We have a proper passion for cooking. Love is the secret ingredient that makes all our meals
 							taste better and magical.</p>
 						<div class="dicover-menu-btn-home2 wow fadeInDown" data-wow-duration="1.8s"
-							data-wow-delay="3.2s"
+							data-wow-delay="1.5s"
 							style="visibility: visible; animation-duration: 1.8s; animation-delay: 3.2s; animation-name: fadeInDown;">
 							<a
 								href="https://up2client.com/envato/bermiz-restaurant/main-file/homepage2.html#homepage2-menu-section">Discover
@@ -687,7 +867,8 @@
 							Menu<span class="pf-10"><img src="./Bermiz_files/yellow-star.png" alt="yellow-star"></span>
 						</p>
 						<h2 class="homemenu-txt2 wow fadeInUp" data-wow-duration="1.2s"
-							style=" visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">Tasty With Good Price</h2>
+							style=" visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">Tasty With
+							Good Price</h2>
 						<p class="homemenu-txt3 wow fadeInUp" data-wow-duration="1.6s"
 							style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">Delicious
 							South Indian and Chinese food at prices you’ll love.
@@ -1006,12 +1187,12 @@
 							Your perfect table will be ready for a relaxed and enjoyable time.</p>
 
 
-							<div class="home2-form-btn mt-5">
-								<a href="">Book A Table</a>
-							</div>
+						<div class="home2-form-btn mt-5">
+							<a href="">Book A Table</a>
+						</div>
 					</div>
 					<div class="fast-ordering-right aos-init aos-animate" data-aos="zoom-in-left">
-						<img src="./Bermiz_files/fast-order-img.png" alt="mobile-img">
+						<img src="./Bermiz_files/index/mob2.jpg" style="width: 600px;" alt="mobile-img">
 					</div>
 				</div>
 			</div>
@@ -1042,48 +1223,28 @@
 									style="opacity: 1; width: 4850px; transform: translate3d(-2910px, 0px, 0px); transition: transform 500ms;">
 									<div class="home2-test-slider slick-slide slick-cloned" data-slick-index="-1" id=""
 										aria-hidden="true" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“ This bermiz restaurant has left the best
-											impressions! Hospitable hosts, delicious dishes, beautiful presentation,
-											wide wine
-											list and wonderful dessert. I recommend to everyone! I would like to come
-											back here again and again.”</p>
-										<p class="home2-test-txt2">PAUL SERGEO</p>
+										<p class="home2-test-txt1">“This place truly made a great impression! Friendly staff, tasty food, lovely presentation, and a great vibe. I highly recommend it and can’t wait to visit again!”</p>
+										<p class="home2-test-txt2">Alan Varghese</p>
 									</div>
 									<div class="home2-test-slider slick-slide slick-current slick-active"
 										data-slick-index="0" aria-hidden="false" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“ This bermiz restaurant has left the best
-											impressions! Hospitable hosts, delicious dishes, beautiful presentation,
-											wide wine
-											list and wonderful dessert. I recommend to everyone! I would like to come
-											back here again and again.”</p>
-										<p class="home2-test-txt2">PAUL SERGEO</p>
+										<p class="home2-test-txt1">“This place truly made a great impression! Friendly staff, tasty food, lovely presentation, and a great vibe. I highly recommend it and can’t wait to visit again!”</p>
+										<p class="home2-test-txt2">Alan Varghese</p>
 									</div>
 									<div class="home2-test-slider slick-slide" data-slick-index="1" aria-hidden="true"
 										style="width: 970px;" tabindex="0">
-										<p class="home2-test-txt1">“ This bermiz restaurant has left the best
-											impressions! Hospitable hosts, delicious dishes, beautiful presentation,
-											wide wine
-											list and wonderful dessert. I recommend to everyone! I would like to come
-											back here again and again.”</p>
-										<p class="home2-test-txt2">PAUL SERGEO</p>
+										<p class="home2-test-txt1">“This place truly made a great impression! Friendly staff, tasty food, lovely presentation, and a great vibe. I highly recommend it and can’t wait to visit again!”</p>
+										<p class="home2-test-txt2">Alan Varghese</p>
 									</div>
 									<div class="home2-test-slider slick-slide slick-cloned" data-slick-index="2" id=""
 										aria-hidden="true" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“ This bermiz restaurant has left the best
-											impressions! Hospitable hosts, delicious dishes, beautiful presentation,
-											wide wine
-											list and wonderful dessert. I recommend to everyone! I would like to come
-											back here again and again.”</p>
-										<p class="home2-test-txt2">PAUL SERGEO</p>
+										<p class="home2-test-txt1">“This place truly made a great impression! Friendly staff, tasty food, lovely presentation, and a great vibe. I highly recommend it and can’t wait to visit again!”</p>
+										<p class="home2-test-txt2">Alan Varghese</p>
 									</div>
 									<div class="home2-test-slider slick-slide slick-cloned" data-slick-index="3" id=""
 										aria-hidden="true" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“ This bermiz restaurant has left the best
-											impressions! Hospitable hosts, delicious dishes, beautiful presentation,
-											wide wine
-											list and wonderful dessert. I recommend to everyone! I would like to come
-											back here again and again.”</p>
-										<p class="home2-test-txt2">PAUL SERGEO</p>
+										<p class="home2-test-txt1">“This place truly made a great impression! Friendly staff, tasty food, lovely presentation, and a great vibe. I highly recommend it and can’t wait to visit again!”</p>
+										<p class="home2-test-txt2">Alan Varghese</p>
 									</div>
 								</div>
 							</div>
@@ -1097,7 +1258,7 @@
 		</section>
 		<!-- Testimonial Section End -->
 		<!-- Blog Section Start -->
-		<section id="home2-blog-sec">
+		<!-- <section id="home2-blog-sec">
 			<div class="container ptb-100">
 				<div class="home2-blog-sec-full">
 					<div class="home2-blog-top">
@@ -1160,7 +1321,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- Blog Section End -->
 		<!-- Gallery Section Start -->
 		<section id="homepage1-gallery-sec" class="home1-mt">
@@ -2366,15 +2527,16 @@
 			<div class="container">
 				<div class="home2-footer-sec-full">
 					<div class="home2-footer-top">
-						<img src="./Bermiz_files/footer-logo.png" alt="footer-logo">
+						<img src="./Bermiz_files/index/logo.png" style="height: 50px;" alt="footer-logo">
 					</div>
 					<div class="home2-footer-bottom">
 						<h3 class="d-none">Footer</h3>
 						<div class="home2-footer-bottom-full">
 							<div class="home2-footer-details">
-								<h4 class="home2-footer-txt1">ABOUT BERMIZ</h4>
-								<p class="home2-footer-txt2">Vitae neque libero ullamcorper gravida fusce donec feugiat
-									massa dui. Turpis massa et ipsum orci, sem commodo. Sapien hendrerit cursus eros.
+								<h4 class="home2-footer-txt1">ABOUT US</h4>
+								<p class="home2-footer-txt2">Flames of India serves fresh, flavourful dishes made with
+									care and tradition.
+									We offer great taste, warm service, and a place you'll love to return to.
 								</p>
 								<div class="home2-footer-social-medial">
 									<div class="social-media">
@@ -2460,35 +2622,35 @@
 								</div>
 							</div>
 							<div class="home2-footer-details">
-								<h4 class="home2-footer-txt1">NEWSLETTER</h4>
-								<p class="home2-footer-txt2">Subscrible &amp; get 10% discount. Get E-mail updates about
-									our latest shop and special offers.</p>
-								<form class="subscribe_form-footer">
-									<div class="position-relative">
-										<input class="subscribe_form_field" placeholder="Your Email Address"
-											type="email" fdprocessedid="sstud2f">
-										<svg class="subscribe_email_svg" width="24" height="24" viewBox="0 0 24 24"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
-											<mask id="mask0_520_4735" style="mask-type:alpha" maskUnits="userSpaceOnUse"
-												x="0" y="0" width="24" height="24">
-												<rect width="24" height="24" fill="white"></rect>
-											</mask>
-											<g mask="url(#mask0_520_4735)">
-												<path
-													d="M15.8325 8.17463L10.109 13.9592L3.59944 9.88767C2.66675 9.30414 2.86077 7.88744 3.91572 7.57893L19.3712 3.05277C20.3373 2.76963 21.2326 3.67283 20.9456 4.642L16.3731 20.0868C16.0598 21.1432 14.6512 21.332 14.0732 20.3953L10.106 13.9602"
-													stroke="#FFDE9F" stroke-width="2" stroke-linecap="round"
-													stroke-linejoin="round"></path>
-											</g>
-										</svg>
-									</div>
-								</form>
+								<h4 class="home2-footer-txt1">WORKING HOURS</h4>
+
+								<p class="home2-footer-txt2"><span style="color: #ffde9f;">Tuesday - Thursday</span>
+									12:00 pm - 03:30 pm (Lunch)
+									05:30 pm - 10:30 pm (Dinner)</p>
+								<p class="home2-footer-txt2"><span style="color: #ffde9f;">Friday & Saturday</span>
+
+									12:00 pm - 03:30 pm (Lunch)
+									05:30 pm - 10:30 pm (Dinner)</p>
+
+								<p class="home2-footer-txt2"><span style="color: #ffde9f;">Sunday</span>
+									12:00 pm - 03:30 pm (Lunch)
+									05:30 pm - 10:30 pm (Dinner)</p>
 							</div>
 							<div class="home2-footer-details">
 								<h4 class="home2-footer-txt1">CONTACT US</h4>
-								<p class="home2-footer-txt2">Bermiz Restaurant &amp; Fine dining
-									71 Madison Ave, New York, USA</p>
-								<p class="home2-footer-txt"><a href="tel:1300748133">+1(234)567 8899</a></p>
-								<p class="home2-footer-txt"><a href="mailto:booking@bermiz.com">booking@bermiz.com</a>
+								<p class="home2-footer-txt">
+									<a href="">
+										<i class="fa-solid fa-location-dot"
+											style="color:#ffde9f; font-size: 1.3rem;"></i>
+										50 Upper Craigs, Stirling FK8 2DS, United Kingdom
+									</a>
+								</p>
+								<p class="home2-footer-txt"><a href="tel:1300748133"><i class="fa-solid fa-phone"
+											style="color:#ffde9f; font-size: 1.3rem;"></i>+441877360322
+									</a></p>
+								<p class="home2-footer-txt"><a href="mailto:flames@skyeforge.co.uk"><i
+											class="fa-solid fa-envelopes-bulk"
+											style="color:#ffde9f; font-size: 1.3rem;"></i> flames@skyeforge.co.uk </a>
 								</p>
 							</div>
 						</div>
@@ -2500,7 +2662,8 @@
 					<div class="container">
 						<div class="copyright-full-sec">
 							<div class="copyright-left">
-								<p class="copyright-txt-homepage1">© Copyright Bermiz Theme for Restaurant &amp; Cafe.
+								<p class="copyright-txt-homepage1">Copyright © 2025 Flames of India. All rights
+									reserved.
 								</p>
 							</div>
 							<div class="copyright-right">
@@ -2901,6 +3064,15 @@
 				});
 			}, 1000);
 		});
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+	<script>
+		AOS.init();
 	</script>
 
 

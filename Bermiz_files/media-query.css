@@ -282,7 +282,7 @@
 		display: none !important;
 	}
 	.fast-ordering-right img{
-		width: 100%;
+		width: 100% !important;
 	}
 	.fast-ordering-home2{
 		margin-top: -100px;
