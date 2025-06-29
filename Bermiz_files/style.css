@@ -344,8 +344,18 @@ a.add-cart-bnt:hover{
     text-transform: uppercase;
     color: #FFDE9F;
 }
+
+.chefs-txt3{
+
+    font-size: 50px;
+    font-family: 'Elsie';
+    font-weight: 400;
+    line-height: 70px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
 .rest-txt2,
-.chefs-txt3,
 .home-menu-txt2,
 .fast-order-txt2,
 .tesimonial-txt2,
