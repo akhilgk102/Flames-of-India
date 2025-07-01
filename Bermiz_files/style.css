@@ -229,6 +229,7 @@ a.add-cart-bnt:hover{
     padding: 0px 40px;
 }
 .homepage2-header2full {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1310,8 +1311,8 @@ div#expand1{
 .home2-hero-txt1 {
     font-family: 'Elsie';
     font-weight: 400;
-    font-size: 128px;
-    line-height: 147px;
+    font-size: 60px;
+    line-height: 107px;
     text-align: center;
     color: #FFFFFF;
 }
