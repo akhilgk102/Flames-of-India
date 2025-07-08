@@ -46,15 +46,23 @@
 
 		<!-- Add this HTML right after your opening <body> tag -->
 		<div class="preloader" id="preloader">
-			<div class="loader-container">
-				<div class="spinner"></div>
-				<div class="spinner"></div>
-				<div class="spinner"></div>
-			</div>
 
-			<div class="progress-bar">
-				<div class="progress"></div>
-			</div>
+
+<script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+
+<dotlottie-player
+  src="https://lottie.host/a83b92d6-4910-44c5-8d5b-aaf828079979/vdG4GcGYjQ.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 300px; height: 300px"
+  loop
+  autoplay
+></dotlottie-player>
+
+
 		</div>
 
 		<!-- Add this CSS to your stylesheet or in <style> tags in your <head> -->
@@ -296,7 +304,7 @@
 							</svg>
 						</a>
 					</div>
-					<div class="mobile-menu-wrap d-lg-none d-block">
+					<div class="mobile-menu-wrap d-lg-none d-block ">
 						<div class="mb-header-left">
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 								data-bs-target="#navbarSupportedmobile" aria-controls="navbarSupportedmobile"
@@ -536,7 +544,7 @@
 				<div class="header2-logo">
 					<div class="header2-logo-sec">
 						<a href="https://up2client.com/envato/bermiz-restaurant/main-file/index.html">
-							<img src="./index_files/img/index_img/new-logo.png" style="height: 90px;" alt="logo-img">
+							<img src="./index_files/img/index_img/new-logo.png" style="height: 80px;" alt="logo-img">
 						</a>
 					</div>
 				</div>
@@ -700,27 +708,17 @@
 				}
 			}
 
-			@media only screen 
-			and (device-width: 430px) 
-			and (device-height: 932px) 
-			and (-webkit-device-pixel-ratio: 3),
-			only screen 
-			and (device-width: 414px) 
-			and (device-height: 896px) 
-			and (-webkit-device-pixel-ratio: 2) {
-				
-			.your-class {
-				margin-top: 9rem;
+			@media only screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3),
+			only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+
+				.your-class {
+					margin-top: 9rem;
+				}
 			}
-			}
-
-
-
-			
 		</style>
 		<!-- Hero Section End -->
 		<!-- Restaurant Section Start -->
-		<section id="home2-our-restaurant-section"  class="reveal active your-class">
+		<section id="home2-our-restaurant-section" class="reveal active your-class">
 			<div class="container ptb-100">
 				<div class="home2-our-restaurant-section-full">
 					<div class="home2-restaurant-top">
@@ -836,6 +834,15 @@
 		</section>
 
 		<!-- Ticker Section End -->
+
+		<style>
+			@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+
+				.new-class {
+					margin-top: 5rem;
+				}
+			}
+		</style>
 		<!-- Chefs Secrets Start -->
 		<section id="chefs-secrets-section" class="reveal">
 			<div class="container ptb-100">
@@ -844,16 +851,14 @@
 						<div class="chefs-bottom-left">
 							<div class="chefs-img-sec">
 								<div class="chefs-img-sec-2-homepage2 pbmit-animation-style1 reveal">
-									<img src="./index_files/img/index_img/restaurant.jpg" style="height: 650px;"
-										width="600px" alt="food-img">
+									<img src="./index_files/img/index_img/chefs-1.png" alt="food-img">
 								</div>
 								<div class="chefs-img-sec-2 pbmit-animation-style2 reveal">
-									<img src="./index_files/img/index_img/quality check.jpg" style="height: 500px;"
-										width="490px" alt="food-img">
+									<img src="./index_files/img/index_img/chefs-2.png" alt="food-img">
 								</div>
 							</div>
 						</div>
-						<div class="chefs-bottom-rigth">
+						<div class="chefs-bottom-rigth new-class">
 							<div class="chefs-bottom-rigth-wrap">
 								<p class="chefs-txt2 wow fadeInLeft" data-wow-duration="2s"
 									style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;">
@@ -2814,8 +2819,7 @@
 						</li>
 
 						<li class="nav-item dropdown mobile-dropdown">
-							<a class="nav-link mobile-link  "
-								href="about.html">
+							<a class="nav-link mobile-link  " href="about.html">
 								About us
 							</a>
 						</li>
