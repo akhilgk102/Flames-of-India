@@ -24,7 +24,7 @@
 	<script src="blob:https://up2client.com/fa95948b-f4ef-4cf7-8859-e7a609ab234c"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-		<!-- Font Awesome (for icons) -->
+	<!-- Font Awesome (for icons) -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -270,7 +270,24 @@
 							</svg>
 						</a>
 					</div>
-					<div class="mobile-homepage-menu">
+					<style>
+						.mobile-homepage-menu {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1rem; /* adjust based on your padding */
+	z-index: 1051; /* ensure it's above content */
+}
+.mb-header-left {
+  min-height: 64px; /* or 70px/80px as needed */
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+
+					</style>
+					<div class="mobile-homepage-menu ">
 						<a class="header2-menu-icon" data-bs-toggle="collapse"
 							href="https://up2client.com/envato/bermiz-restaurant/main-file/homepage2.html#navbarSupportedmobile"
 							role="button" aria-controls="offcanvasExample">
@@ -303,118 +320,119 @@
 					</div>
 
 					<!-- ✅ CSS: Add in your <style> or CSS file -->
-<style>
-  /* Hide submenus by default */
-  #cssmenu ul.sub-back-wrap {
-    display: none;
-  }
-</style>
+					<style>
+						/* Hide submenus by default */
+						#cssmenu ul.sub-back-wrap {
+							display: none;
+						}
+					</style>
 
-<!-- ✅ HTML -->
-<div class="mobile-menu-wrap d-lg-none d-block">
-  <div class="mb-header-left">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedmobile" aria-controls="navbarSupportedmobile"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-    </button>
+					<!-- ✅ HTML -->
+					<div class="mobile-menu-wrap d-lg-none d-block">
+						<div class="mb-header-left">
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+								data-bs-target="#navbarSupportedmobile" aria-controls="navbarSupportedmobile"
+								aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+							</button>
 
-    <div class="navbar-collapse collapse" id="navbarSupportedmobile">
-      <span class="close-menu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedmobile">
-        <i class="fa-regular fa-xmark"></i>
-      </span>
+							<div class="navbar-collapse collapse" id="navbarSupportedmobile">
+								<span class="close-menu" data-bs-toggle="collapse"
+									data-bs-target="#navbarSupportedmobile">
+									<i class="fa-regular fa-xmark"></i>
+								</span>
 
-      <nav id="cssmenu">
-        <ul class="open-detail-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+								<nav id="cssmenu">
+									<ul class="open-detail-menu">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About Us</a></li>
 
-          <li class="has-sub">
-            <a href="javascript:void(0);">Menu</a>
-            <ul class="sub-back-wrap">
-              <li><a href="#">Food Menu</a></li>
-              <li><a href="#">Drinks Menu</a></li>
-            </ul>
-          </li>
+										<li class="has-sub">
+											<a href="javascript:void(0);">Menu</a>
+											<ul class="sub-back-wrap">
+												<li><a href="#">Food Menu</a></li>
+												<li><a href="#">Drinks Menu</a></li>
+											</ul>
+										</li>
 
-          <li><a href="reservation.html">Book a Table</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</div>
+										<li><a href="reservation.html">Book a Table</a></li>
+										<li><a href="gallery.html">Gallery</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
 
-<!-- ✅ JavaScript -->
-<script>
-  /* Mobile Menu Toggle Logic */
-  $(document).on("click", function (event) {
-    if ($(event.target).closest(".navbar-toggler").length) {
-      $(".navbar-collapse.collapse").toggleClass("show");
-    } else if (!$(event.target).closest(".navbar-collapse").length) {
-      $(".navbar-collapse").removeClass("show");
-    }
-  });
+					<!-- ✅ JavaScript -->
+					<script>
+						/* Mobile Menu Toggle Logic */
+						$(document).on("click", function (event) {
+							if ($(event.target).closest(".navbar-toggler").length) {
+								$(".navbar-collapse.collapse").toggleClass("show");
+							} else if (!$(event.target).closest(".navbar-collapse").length) {
+								$(".navbar-collapse").removeClass("show");
+							}
+						});
 
-  $('.close-menu').on("click", function () {
-    $('.navbar-collapse').removeClass('show');
-  });
+						$('.close-menu').on("click", function () {
+							$('.navbar-collapse').removeClass('show');
+						});
 
-  (function ($) {
-    $.fn.menumaker = function (options) {
-      var cssmenu = $(this),
-        settings = $.extend({
-          format: "dropdown",
-          sticky: false
-        }, options);
+						(function ($) {
+							$.fn.menumaker = function (options) {
+								var cssmenu = $(this),
+									settings = $.extend({
+										format: "dropdown",
+										sticky: false
+									}, options);
 
-      return this.each(function () {
-        cssmenu.find('li ul').parent().addClass('has-sub');
+								return this.each(function () {
+									cssmenu.find('li ul').parent().addClass('has-sub');
 
-        function multiTg() {
-          cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+									function multiTg() {
+										cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
 
-          cssmenu.find('.submenu-button').on('click', function () {
-            $(this).toggleClass('submenu-opened');
-            var submenu = $(this).siblings('ul');
-            if (submenu.hasClass('open')) {
-              submenu.removeClass('open').slideUp();
-            } else {
-              submenu.addClass('open').slideDown();
-            }
-          });
-        }
+										cssmenu.find('.submenu-button').on('click', function () {
+											$(this).toggleClass('submenu-opened');
+											var submenu = $(this).siblings('ul');
+											if (submenu.hasClass('open')) {
+												submenu.removeClass('open').slideUp();
+											} else {
+												submenu.addClass('open').slideDown();
+											}
+										});
+									}
 
-        if (settings.format === 'multitoggle') multiTg();
-        else cssmenu.addClass('dropdown');
+									if (settings.format === 'multitoggle') multiTg();
+									else cssmenu.addClass('dropdown');
 
-        if (settings.sticky === true) cssmenu.css('position', 'fixed');
+									if (settings.sticky === true) cssmenu.css('position', 'fixed');
 
-        function resizeFix() {
-          var mediasize = 1199;
-          if ($(window).width() > mediasize) {
-            cssmenu.find('ul').show();
-          }
-          if ($(window).width() <= mediasize) {
-            cssmenu.find('ul').hide().removeClass('open');
-          }
-        }
+									function resizeFix() {
+										var mediasize = 1199;
+										if ($(window).width() > mediasize) {
+											cssmenu.find('ul').show();
+										}
+										if ($(window).width() <= mediasize) {
+											cssmenu.find('ul').hide().removeClass('open');
+										}
+									}
 
-        resizeFix();
-        return $(window).on('resize', resizeFix);
-      });
-    };
-  })(jQuery);
+									resizeFix();
+									return $(window).on('resize', resizeFix);
+								});
+							};
+						})(jQuery);
 
-  (function ($) {
-    $(document).ready(function () {
-      $("#cssmenu").menumaker({
-        format: "multitoggle"
-      });
-    });
-  })(jQuery);
-</script>
+						(function ($) {
+							$(document).ready(function () {
+								$("#cssmenu").menumaker({
+									format: "multitoggle"
+								});
+							});
+						})(jQuery);
+					</script>
 
 
 				</div>
@@ -426,10 +444,12 @@
 					</div>
 				</div>
 				<div class="header2-cart-section">
-					<div>
-						<a href="https://wa.me/441877360322" target="_blank" class="cart-badge">
-							<img src="./index_files/img/index_img/whatsapp.png" style="height: 80px;"
-								alt="WhatsApp Icon">
+					<div class="header-cart-sec-first">
+						<a href="https://up2client.com/envato/bermiz-restaurant/main-file/cart-view.html"
+							class="cart-badge">
+							<img src="./index_files/img/index_img/whatsapp (2).svg" style="height: 35px;"
+								alt="cart-icon">
+							<div class="cart-no">0</div>
 						</a>
 					</div>
 				</div>
@@ -502,7 +522,8 @@
 								</select>
 							</div>
 							<div class="single-input-form-home2 ">
-								<input type="text" id="datepicker" autocomplete="off" placeholder="dd/mm/yy" class="custom-input-home3-form custom-select2 hasDatepicker">
+								<input type="text" id="datepicker" autocomplete="off" placeholder="dd/mm/yy"
+									class="custom-input-home3-form custom-select2 hasDatepicker">
 							</div>
 
 							<div class="single-input-form-home2 ">
@@ -542,8 +563,9 @@
 
 		<style>
 			#cssmenu ul.sub-back-wrap {
-		display: none;
-		}
+				display: none;
+			}
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -2798,7 +2820,7 @@
 	<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
 	</div>
 	<script src="./index_files/js/custom.js.download">
-		
+
 	</script>
 	<script src="./index_files/js/photoswipe.min.js.download"></script>
 	<script src="./index_files/js/photoswipe-ui-default.min.js.download"></script>
@@ -2807,7 +2829,7 @@
 	<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
 
 	<script>
-		
+
 		// Option 1: Simple scroll-based reveal
 		window.addEventListener('scroll', function () {
 			const reveals = document.querySelectorAll('.reveal');
@@ -2865,7 +2887,7 @@
 		AOS.init();
 	</script>
 
-	
+
 
 
 </body>
