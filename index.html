@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0071)https://up2client.com/envato/bermiz-restaurant/main-file/homepage2.html -->
 <html lang="en" webcrx="">
 
 <head>
@@ -24,6 +23,12 @@
 	<link rel="stylesheet" href="./index_files/css/media-query.css">
 	<script src="blob:https://up2client.com/fa95948b-f4ef-4cf7-8859-e7a609ab234c"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+		<!-- Font Awesome (for icons) -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 	<style>
@@ -296,62 +301,122 @@
 							</svg>
 						</a>
 					</div>
-					<div class="mobile-menu-wrap d-lg-none d-block ">
-						<div class="mb-header-left">
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-								data-bs-target="#navbarSupportedmobile" aria-controls="navbarSupportedmobile"
-								aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-							</button>
-							<div class="navbar-collapse" id="navbarSupportedmobile">
-								<span class="close-menu"><i class="fa-regular fa-xmark"></i></span>
-								<nav id="cssmenu">
-									<ul class="open-detail-menu">
-										<li class=""><span class=""></span><a href="index.html">Home</a>
-										</li>
-										<li><a
-												href="about.html">About
-												Us</a>
-										</li>
-										<li class="has-sub"><span class="submenu-button"></span><a
-												href="javascript:void(0);">Menu</a>
-											<ul class="sub-back-wrap">
 
-												<li><a href="">Food Menu</a>
-												</li>
-												<li><a href="">Drinks Menu</a>
-												</li>
-											</ul>
-										</li>
-											<li><a
-												href="reservation.html">Book a Table</a>
-										</li>
+					<!-- ✅ CSS: Add in your <style> or CSS file -->
+<style>
+  /* Hide submenus by default */
+  #cssmenu ul.sub-back-wrap {
+    display: none;
+  }
+</style>
 
-										<li><a
-												href="gallery.html">Gallery</a>
-										</li>
-										<li><a
-												href="contact.html">Contact Us</a>
-										</li>
+<!-- ✅ HTML -->
+<div class="mobile-menu-wrap d-lg-none d-block">
+  <div class="mb-header-left">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedmobile" aria-controls="navbarSupportedmobile"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+    </button>
 
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-					<script>
-						// Add this JavaScript code to make the close menu work
-document.addEventListener('DOMContentLoaded', function() {
-    const closeMenu = document.querySelector('.close-menu');
-    const navbarCollapse = document.querySelector('#navbarSupportedmobile');
-    
-    if (closeMenu && navbarCollapse) {
-        closeMenu.addEventListener('click', function() {
-            navbarCollapse.classList.remove('show');
-        });
+    <div class="navbar-collapse collapse" id="navbarSupportedmobile">
+      <span class="close-menu" data-bs-toggle="collapse" data-bs-target="#navbarSupportedmobile">
+        <i class="fa-regular fa-xmark"></i>
+      </span>
+
+      <nav id="cssmenu">
+        <ul class="open-detail-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+          <li class="has-sub">
+            <a href="javascript:void(0);">Menu</a>
+            <ul class="sub-back-wrap">
+              <li><a href="#">Food Menu</a></li>
+              <li><a href="#">Drinks Menu</a></li>
+            </ul>
+          </li>
+
+          <li><a href="reservation.html">Book a Table</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ JavaScript -->
+<script>
+  /* Mobile Menu Toggle Logic */
+  $(document).on("click", function (event) {
+    if ($(event.target).closest(".navbar-toggler").length) {
+      $(".navbar-collapse.collapse").toggleClass("show");
+    } else if (!$(event.target).closest(".navbar-collapse").length) {
+      $(".navbar-collapse").removeClass("show");
     }
-});
-					</script>
+  });
+
+  $('.close-menu').on("click", function () {
+    $('.navbar-collapse').removeClass('show');
+  });
+
+  (function ($) {
+    $.fn.menumaker = function (options) {
+      var cssmenu = $(this),
+        settings = $.extend({
+          format: "dropdown",
+          sticky: false
+        }, options);
+
+      return this.each(function () {
+        cssmenu.find('li ul').parent().addClass('has-sub');
+
+        function multiTg() {
+          cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+
+          cssmenu.find('.submenu-button').on('click', function () {
+            $(this).toggleClass('submenu-opened');
+            var submenu = $(this).siblings('ul');
+            if (submenu.hasClass('open')) {
+              submenu.removeClass('open').slideUp();
+            } else {
+              submenu.addClass('open').slideDown();
+            }
+          });
+        }
+
+        if (settings.format === 'multitoggle') multiTg();
+        else cssmenu.addClass('dropdown');
+
+        if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+        function resizeFix() {
+          var mediasize = 1199;
+          if ($(window).width() > mediasize) {
+            cssmenu.find('ul').show();
+          }
+          if ($(window).width() <= mediasize) {
+            cssmenu.find('ul').hide().removeClass('open');
+          }
+        }
+
+        resizeFix();
+        return $(window).on('resize', resizeFix);
+      });
+    };
+  })(jQuery);
+
+  (function ($) {
+    $(document).ready(function () {
+      $("#cssmenu").menumaker({
+        format: "multitoggle"
+      });
+    });
+  })(jQuery);
+</script>
+
+
 				</div>
 				<div class="header2-logo">
 					<div class="header2-logo-sec">
@@ -437,8 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
 								</select>
 							</div>
 							<div class="single-input-form-home2 ">
-								<input type="text" id="datepicker" autocomplete="off" placeholder="dd/mm/yy"
-									class="custom-input-home3-form custom-select2 hasDatepicker" fdprocessedid="hlmnob">
+								<input type="text" id="datepicker" autocomplete="off" placeholder="dd/mm/yy" class="custom-input-home3-form custom-select2 hasDatepicker">
 							</div>
 
 							<div class="single-input-form-home2 ">
@@ -477,6 +541,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		</section>
 
 		<style>
+			#cssmenu ul.sub-back-wrap {
+		display: none;
+		}
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -770,8 +837,8 @@ document.addEventListener('DOMContentLoaded', function() {
 									alt="yellow-star"></span>
 						</p>
 						<h2 class="homemenu-txt2 wow fadeInUp" data-wow-duration="1.2s"
-							style=" color: #ffde9f; visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
-							Flames of India</h2>
+							style=" visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
+							Tasty With Good Price</h2>
 						<p class="homemenu-txt3 wow fadeInUp" data-wow-duration="1.6s"
 							style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">Delicious
 							South Indian and Chinese food at prices you’ll love.
@@ -2727,11 +2794,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	<script src="./index_files/js/aos.js.download"></script>
 	<script src="./index_files/js/wow.min.js.download"></script>
 	<script src="./index_files/js/jquery-ui.min.js.download"></script>
-	<script src="./reservation_files/js/custom.js.download"></script>
 	<script src="./index_files/js/datepicker.js.download"></script>
 	<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
 	</div>
-	<script src="./index_files/js/custom.js.download"></script>
+	<script src="./index_files/js/custom.js.download">
+		
+	</script>
 	<script src="./index_files/js/photoswipe.min.js.download"></script>
 	<script src="./index_files/js/photoswipe-ui-default.min.js.download"></script>
 	<script src="./index_files/js/gallery-popup.js.download"></script>
@@ -2739,6 +2807,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
 
 	<script>
+		
 		// Option 1: Simple scroll-based reveal
 		window.addEventListener('scroll', function () {
 			const reveals = document.querySelectorAll('.reveal');
@@ -2795,6 +2864,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	<script>
 		AOS.init();
 	</script>
+
+	
 
 
 </body>
