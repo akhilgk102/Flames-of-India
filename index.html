@@ -1200,76 +1200,167 @@
 		</section>
 		<!-- Mobile Section End -->
 
->
-		<!-- Testimonial Section Start -->
-		<section id="home2-testimonials-sec">
-			<div class="homepage2-testimo-overlay"></div>
-			<div class="container">
-				<div class="home2-testimonials-sec-full">
-					<div class="home2-test-top">
-						<p class="homemenu-txt1 wow fadeInUp" data-wow-duration="1s"
-							style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;"><span
-								class="pr-10"><img src="./index_files/img/index_img/yellow-star.png"
-									alt="yellow-star"></span>TESTIMONIALS<span class="pf-10"><img
-									src="./index_files/img/index_img/yellow-star.png" alt="yellow-star"></span></p>
-						<h2 class="homemenu-txt2 homemenu-txt22 wow fadeInUp" data-wow-duration="1.4s"
-							style="visibility: visible; animation-duration: 1.4s; animation-name: fadeInUp;">The Reviews
-							Of Customers When Coming To Our Restaurant!</h2>
-					</div>
-					<div class="home2-test-bottom wow fadeInUp" data-wow-duration="1.6s"
-						style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">
-						<div class="home2-test-bottom-full slick-initialized slick-slider">
-							<div class="slick-custom-arrow slick-custom-arrow-left slick-arrow" style=""><i
-									class="fa-solid fa-arrow-left"></i></div>
-							<div class="slick-list draggable">
-								<div class="slick-track"
-									style="opacity: 1; width: 4850px; transform: translate3d(-2910px, 0px, 0px); transition: transform 500ms;">
-									<div class="home2-test-slider slick-slide slick-cloned" data-slick-index="-1" id=""
-										aria-hidden="true" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“This place truly made a great impression! Friendly
-											staff, tasty food, lovely presentation, and a great vibe. I highly recommend
-											it and can’t wait to visit again!”</p>
-										<p class="home2-test-txt2">Alan Varghese</p>
-									</div>
-									<div class="home2-test-slider slick-slide slick-current slick-active"
-										data-slick-index="0" aria-hidden="false" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“This place truly made a great impression! Friendly
-											staff, tasty food, lovely presentation, and a great vibe. I highly recommend
-											it and can’t wait to visit again!”</p>
-										<p class="home2-test-txt2">Alan Varghese</p>
-									</div>
-									<div class="home2-test-slider slick-slide" data-slick-index="1" aria-hidden="true"
-										style="width: 970px;" tabindex="0">
-										<p class="home2-test-txt1">“This place truly made a great impression! Friendly
-											staff, tasty food, lovely presentation, and a great vibe. I highly recommend
-											it and can’t wait to visit again!”</p>
-										<p class="home2-test-txt2">Alan Varghese</p>
-									</div>
-									<div class="home2-test-slider slick-slide slick-cloned" data-slick-index="2" id=""
-										aria-hidden="true" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“This place truly made a great impression! Friendly
-											staff, tasty food, lovely presentation, and a great vibe. I highly recommend
-											it and can’t wait to visit again!”</p>
-										<p class="home2-test-txt2">Alan Varghese</p>
-									</div>
-									<div class="home2-test-slider slick-slide slick-cloned" data-slick-index="3" id=""
-										aria-hidden="true" style="width: 970px;" tabindex="-1">
-										<p class="home2-test-txt1">“This place truly made a great impression! Friendly
-											staff, tasty food, lovely presentation, and a great vibe. I highly recommend
-											it and can’t wait to visit again!”</p>
-										<p class="home2-test-txt2">Alan Varghese</p>
-									</div>
-								</div>
-							</div>
 
-							<div class="slick-custom-arrow slick-custom-arrow-right slick-arrow" style=""><i
-									class="fa-solid fa-arrow-right"></i></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Testimonial Section End -->
+<!-- Testimonial Section Start -->
+<section id="home2-testimonials-sec">
+    <div class="homepage2-testimo-overlay"></div>
+    <div class="container">
+        <div class="home2-testimonials-sec-full">
+            <div class="home2-test-top">
+                <p class="homemenu-txt1 wow fadeInUp" data-wow-duration="1s"
+                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;"><span
+                        class="pr-10"><img src="./index_files/img/index_img/yellow-star.png"
+                            alt="yellow-star"></span>TESTIMONIALS<span class="pf-10"><img
+                            src="./index_files/img/index_img/yellow-star.png" alt="yellow-star"></span></p>
+                <h2 class="homemenu-txt2 homemenu-txt22 wow fadeInUp" data-wow-duration="1.4s"
+                    style="visibility: visible; animation-duration: 1.4s; animation-name: fadeInUp;">The Reviews
+                    Of Customers When Coming To Our Restaurant!</h2>
+            </div>
+            <div class="home2-test-bottom wow fadeInUp" data-wow-duration="1.6s"
+                style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">
+                <div class="home2-test-bottom-full slick-initialized slick-slider">
+                    <div class="slick-custom-arrow slick-custom-arrow-left slick-arrow" id="prev-arrow"><i
+                            class="fa-solid fa-arrow-left"></i></div>
+                    <div class="slick-list draggable">
+                        <div class="slick-track" id="slick-track">
+                            <div class="home2-test-slider slick-slide" data-slide-index="0">
+                                <p class="home2-test-txt1">"This place truly made a great impression! Friendly
+                                    staff, tasty food, lovely presentation, and a great vibe. I highly recommend
+                                    it and can't wait to visit again!"</p>
+                                <p class="home2-test-txt2">Alan Varghese</p>
+                            </div>
+                            <div class="home2-test-slider slick-slide" data-slide-index="1" style="display: none;">
+                                <p class="home2-test-txt1">"Amazing experience! The food was delicious and the 
+                                    service was exceptional. The ambiance is perfect for a romantic dinner. 
+                                    Will definitely come back!"</p>
+                                <p class="home2-test-txt2">Sarah Johnson</p>
+                            </div>
+                            <div class="home2-test-slider slick-slide" data-slide-index="2" style="display: none;">
+                                <p class="home2-test-txt1">"Outstanding restaurant! Every dish was perfectly 
+                                    prepared and presented beautifully. The staff went above and beyond to 
+                                    make our evening special."</p>
+                                <p class="home2-test-txt2">Michael Chen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-custom-arrow slick-custom-arrow-right slick-arrow" id="next-arrow"><i
+                            class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+<style>
+@media (max-width: 430px) {
+  #homepage1-gallery-sec {
+    display: none;
+  }
+}
+/* Only adding minimal styles for slide functionality */
+.home2-test-slider {
+    display: none;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.home2-test-slider.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.home2-test-slider.fade-out-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.home2-test-slider.fade-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slick-custom-arrow {
+    cursor: pointer;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.home2-test-slider');
+    const prevArrow = document.getElementById('prev-arrow');
+    const nextArrow = document.getElementById('next-arrow');
+    let currentSlide = 0;
+    let isTransitioning = false;
+
+    function showSlide(index, direction = 'next') {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        const currentSlideElement = slides[currentSlide];
+        const nextSlideElement = slides[index];
+
+        // Fade out current slide
+        if (currentSlideElement) {
+            currentSlideElement.classList.add('fade-out-left');
+        }
+
+        setTimeout(() => {
+            // Hide current slide
+            if (currentSlideElement) {
+                currentSlideElement.style.display = 'none';
+                currentSlideElement.classList.remove('active', 'fade-out-left');
+            }
+
+            // Show next slide with fade in effect
+            if (nextSlideElement) {
+                nextSlideElement.style.display = 'block';
+                nextSlideElement.style.opacity = '0';
+                nextSlideElement.style.transform = direction === 'next' ? 'translateX(50px)' : 'translateX(-50px)';
+                
+                setTimeout(() => {
+                    nextSlideElement.classList.add('active');
+                    nextSlideElement.style.opacity = '1';
+                    nextSlideElement.style.transform = 'translateX(0)';
+                    
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, 500);
+                }, 50);
+            }
+        }, 250);
+    }
+
+    function nextSlide() {
+        if (isTransitioning) return;
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex, 'next');
+        currentSlide = nextIndex;
+    }
+
+    function prevSlide() {
+        if (isTransitioning) return;
+        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevIndex, 'prev');
+        currentSlide = prevIndex;
+    }
+
+    if (nextArrow && prevArrow) {
+        nextArrow.addEventListener('click', nextSlide);
+        prevArrow.addEventListener('click', prevSlide);
+    }
+
+    // Initialize - show first slide
+    if (slides[0]) {
+        slides[0].style.display = 'block';
+        slides[0].classList.add('active');
+        slides[0].style.opacity = '1';
+        slides[0].style.transform = 'translateX(0)';
+    }
+});
+</script>
 		<!-- Blog Section Start -->
 		<!-- <section id="home2-blog-sec">
 			<div class="container ptb-100">
@@ -1337,7 +1428,7 @@
 		</section> -->
 		<!-- Blog Section End -->
 		<!-- Gallery Section Start -->
-		<section id="homepage1-gallery-sec" class="home1-mt">
+		<section id="homepage1-gallery-sec" class="home1-mt mt-70">
 			<div class="container home2-gallery-top">
 				<div class="gallery-top-sec">
 					<p class="gallery-txt1"><span class="pr-10"><img src="./index_files/img/index_img/yellow-star.png"
