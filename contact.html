@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0072)https://up2client.com/envato/bermiz-restaurant/main-file/contact-us.html -->
-<html lang="en" webcrx=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
+<html lang="en" webcrx="">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact Us</title>
@@ -17,29 +19,210 @@
 	<link rel="stylesheet" href="./contact_files/css/media-query.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-		<style>
+	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap');
 		@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Lexend:wght@100..900&display=swap');
 	</style>
-<script src="blob:https://up2client.com/ca35fb2a-d3f0-48e4-90a8-71b22a1e72f6"></script></head>
+	<script src="blob:https://up2client.com/ca35fb2a-d3f0-48e4-90a8-71b22a1e72f6"></script>
+</head>
+
 <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="400">
 	<div class="site_content">
 		<!-- Preloader Start -->
-		<div id="overlayer" style="display: none;">
-			<div id="spinner" style="display: none;">
-				<svg class="spinner-webkit" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 54 54">
-					<path d="M28.14,44a3.26,3.26,0,0,1,.53,1.63l.3,4.93a1.42,1.42,0,0,0,1.66,1.31A25.85,25.85,0,0,0,52.18,26.38v0A25.84,25.84,0,1,0,22.05,51.83a1.43,1.43,0,0,0,1.66-1.31L24,45.6a3.74,3.74,0,0,1,1.7-2.84l6.52-5.18a7.06,7.06,0,0,0,2.61-5.71L33.43,9.11A.16.16,0,0,0,33.26,9L32.18,9A1.4,1.4,0,0,0,30.9,10.4v15a1.46,1.46,0,0,1-1.46,1.46h0A1.46,1.46,0,0,1,28,25.45V10.79a1.65,1.65,0,0,0-1.65-1.65h0a1.65,1.65,0,0,0-1.65,1.65V25.45a1.46,1.46,0,0,1-1.46,1.46h0a1.46,1.46,0,0,1-1.46-1.46v-15A1.4,1.4,0,0,0,20.5,9L19.42,9a.16.16,0,0,0-.17.15L17.84,31.87a7.06,7.06,0,0,0,2.61,5.71l5.89,4.68"></path>
-				</svg>
-				<div class="spinner-ie"></div>
+		<div class="site_content">
+			<div class="preloader" id="preloader">
+
+
+				<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+					type="module"></script>
+
+				<dotlottie-player src="https://lottie.host/a83b92d6-4910-44c5-8d5b-aaf828079979/vdG4GcGYjQ.lottie"
+					background="transparent" speed="1" style="width: 300px; height: 300px" loop
+					autoplay></dotlottie-player>
+
+
 			</div>
-		</div> 
-		<!-- Preloader End -->
+
+			<!-- Add this CSS to your stylesheet or in <style> tags in your <head> -->
+			<style>
+				.preloader {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #0b1315;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					z-index: 9999;
+					transition: all 0.8s ease-in-out;
+				}
+
+				.preloader.hidden {
+					opacity: 0;
+					transform: translateY(-100%);
+					pointer-events: none;
+				}
+
+				.loader-container {
+					position: relative;
+					width: 120px;
+					height: 120px;
+					margin-bottom: 30px;
+				}
+
+				.spinner {
+					position: absolute;
+					border: 3px solid rgba(255, 255, 255, 0.1);
+					border-radius: 50%;
+					border-top: 3px solid #ffffff;
+					animation: spin 1s linear infinite;
+				}
+
+				.spinner:nth-child(1) {
+					width: 100%;
+					height: 100%;
+				}
+
+				.spinner:nth-child(2) {
+					width: 80%;
+					height: 80%;
+					top: 10%;
+					left: 10%;
+					border-top: 3px solid #ffd700;
+					animation-duration: 0.8s;
+				}
+
+				.spinner:nth-child(3) {
+					width: 60%;
+					height: 60%;
+					top: 20%;
+					left: 20%;
+					border-top: 3px solid #ff6b6b;
+					animation-duration: 0.6s;
+				}
+
+				.loading-text {
+					font-size: 24px;
+					font-weight: 300;
+					color: white;
+					letter-spacing: 3px;
+					margin-bottom: 20px;
+				}
+
+				.loading-text span {
+					display: inline-block;
+					animation: bounce 1.4s ease-in-out infinite both;
+				}
+
+				.loading-text span:nth-child(1) {
+					animation-delay: -0.32s;
+				}
+
+				.loading-text span:nth-child(2) {
+					animation-delay: -0.16s;
+				}
+
+				.loading-text span:nth-child(3) {
+					animation-delay: 0s;
+				}
+
+				.loading-text span:nth-child(4) {
+					animation-delay: 0.16s;
+				}
+
+				.loading-text span:nth-child(5) {
+					animation-delay: 0.32s;
+				}
+
+				.loading-text span:nth-child(6) {
+					animation-delay: 0.48s;
+				}
+
+				.loading-text span:nth-child(7) {
+					animation-delay: 0.64s;
+				}
+
+				.progress-bar {
+					width: 300px;
+					height: 4px;
+					background: rgba(255, 255, 255, 0.2);
+					border-radius: 2px;
+					overflow: hidden;
+				}
+
+				.progress {
+					height: 100%;
+					background: linear-gradient(90deg, #ffd700, #ff6b6b, #ffffff);
+					border-radius: 2px;
+					animation: progress 3s ease-in-out infinite;
+				}
+
+				@keyframes spin {
+					0% {
+						transform: rotate(0deg);
+					}
+
+					100% {
+						transform: rotate(360deg);
+					}
+				}
+
+				@keyframes bounce {
+
+					0%,
+					80%,
+					100% {
+						transform: scale(0);
+						opacity: 0.5;
+					}
+
+					40% {
+						transform: scale(1);
+						opacity: 1;
+					}
+				}
+
+				@keyframes progress {
+					0% {
+						width: 0%;
+					}
+
+					50% {
+						width: 70%;
+					}
+
+					100% {
+						width: 100%;
+					}
+				}
+			</style>
+
+
+			<script>
+				window.addEventListener('load', function () {
+					const preloader = document.getElementById('preloader');
+
+					// Add a minimum loading time for better UX
+					setTimeout(() => {
+						preloader.classList.add('hidden');
+
+						// Remove preloader from DOM after animation
+						setTimeout(() => {
+							preloader.remove();
+						}, 800);
+					}, 3500); // Adjust timing as needed
+				});
+			</script>
+			<!-- Preloader End -->
 		<!-- Header Section Start -->
 		<header id="header-homepage1" class="menupage1-header">
 			<div class="header-full-section">
 				<div class="header-logo">
-					<a href="https://up2client.com/envato/bermiz-restaurant/main-file/index.html">
-						<img src="./contact_files/img/new-logo.png" style="height: 60px;" alt="header-logo" class="homepage1-logo">
+					<a href="index.html">
+						<img src="./reservation_files/img/new-logo.png" style="height: 60px; width: 220px;"  alt="header-logo" class="homepage1-logo">
 					</a>
 				</div>
 				<div class="header-menu-wrap">
@@ -48,147 +231,39 @@
 							<div class="navbar-collapse" id="navbarSupportedContent">
 								<div class="navbar-nav mx-auto align-items-center">
 									<ul class="nav-left p-0">
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle" aria-current="page" href="javascript:void(0);">Home</a>
-											<ul class="dropdown-menu homepage-menu">
-												<li class="widget_media_image"><a class="dropdown-item active" href="https://up2client.com/envato/bermiz-restaurant/main-file/index.html"><img src="./contact_files/homepage-1.png" alt="menu-img"></a></li>
-												<li class="widget_media_image mega-menu-item-media_image-3"><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/homepage2.html"><img src="./contact_files/homepage-2.png" alt="menu-img"></a></li>
-												<li class="widget_media_image mega-menu-item-media_image-6"><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/homepage3.html"><img src="./contact_files/homepage-3.jpg" alt="menu-img"></a></li>
-											</ul>
+										<li class="nav-item ">
+											<a class="nav-link  " style="font-family: lexend;" aria-current="page" href="index.html">Home</a>
+										</li>
+																				<li class="nav-item ">
+											<a class="nav-link  " style="font-family: lexend;"  href="about.html">
+												About Us
+											</a>
 										</li>
 										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle " href="javascript:void(0);">
+											<a class="nav-link dropdown-toggle " style="font-family: lexend;"  href="javascript:void(0);">
 												Menu
 											</a>
 											<ul class="dropdown-menu blog-menu-sub">
 												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Menu List<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-1.html">Menu List 1</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-2.html">Menu List 2</a></li>
-													</ul>
+													<a class="dropdown-item" href="flames_menu_v08.pdf">Food Menu</a>
 												</li>
 												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Menu Tab<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-3.html">Menu Tab 1</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-4.html">Menu Tab 2</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-5.html">Menu Section</a>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Menu Grid<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-6.html">Menu Grid 1</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-7.html">Menu Grid 2</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-8.html">Menu Grid 3</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-shop.html">Single Shop</a>
+													<a class="dropdown-item" href="Flames_drinks_v01.pdf">Drinks Menu</a>
 												</li>
 											</ul>
 										</li>
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle " href="javascript:void(0);">
-												Blog
-											</a>
-											<ul class="dropdown-menu blog-menu-sub">
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Blog Standard<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-1.html">Blog Standard</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-2.html">Blog Standard: Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-3.html">Blog Standard: Left Sidebar</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-4.html">Blog List</a>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Blog Grid<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-5.html">Grid 1 + 2 Columns</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-6.html">Grid 2 + 3 Columns</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-7.html">Grid 3 + 3 Columns</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-8.html">Grid4 + 2 Columns + Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-9.html">Grid4 + 2 Columns + Left Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-10.html">Grid5 + 2 Columns + Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-11.html">Grid5 + 2 Columns + Left Sidebar</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Blog Masonry<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-12.html">Blog Masonry 1</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-13.html">Blog Masonry 2</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Single Blog<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage1.html">Single Blog Standard: Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage6.html">Single Blog Standard: Left Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage2.html">Quote: Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage7.html">Quote: Left Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage3.html">Link: Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage8.html">Link: Left Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage4.html">Slider: Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage9.html">Slider: Left Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage5.html">Video: Right Sidebar</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage10.html">Video: Left Sidebar</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle " href="javascript:void(0);">
-												Pages
-											</a>
-											<ul class="dropdown-menu blog-menu-sub">
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Our Chefs<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/chefspage1.html">Our Chefs 1</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/chefspage2.html">Our Chefs 2</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/chefspage3.html">Our Chefs 3</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/single-chefs-deatail-page.html">Single Chefs Details</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="javascript:void(0);">Reservation<span class="arrow-right-angle"></span></a>
-													<ul class="has-sub-menu">
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/reservation-1.html">Reservation 1</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/reservation-2.html">Reservation 2</a></li>
-														<li><a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/reservation-3.html">Reservation 3</a></li>
-													</ul>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/historypage.html">Our History</a>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/404-error.html">404 Error</a>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/comming-soon.html">Coming Soon</a>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/cart-view.html">Cart View</a>
-												</li>
-												<li class="has-sub-main">
-													<a class="dropdown-item" href="https://up2client.com/envato/bermiz-restaurant/main-file/checkout-page.html">Checkout</a>
-												</li>
-											</ul>
-										</li>
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle " href="https://up2client.com/envato/bermiz-restaurant/main-file/about-us.html">
-												About Us
+										<li class="nav-item ">
+											<a class="nav-link " style="font-family: lexend;"  href="reservation.html">
+												Book Table
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link active" href="https://up2client.com/envato/bermiz-restaurant/main-file/contact-us.html">Contact Us</a>
+										<li class="nav-item ">
+											<a class="nav-link " style="font-family: lexend;"  href="gallery.html">
+												Gallery
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" style="font-family: lexend;"  href="contact.html">Contact Us</a>
 										</li>
 									</ul>
 								</div>
@@ -196,126 +271,35 @@
 						</nav>
 					</div>
 				</div>
-				<div class="mobile-menu-wrap d-lg-none  d-block">
+				<div class="mobile-menu-wrap d-lg-none d-block">
 					<div class="mb-header-left">
 						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedmobile" aria-controls="navbarSupportedmobile" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
 						</button>
-						<div class="collapse navbar-collapse" id="navbarSupportedmobile">
+						<div class="navbar-collapse" id="navbarSupportedmobile">
 							<span class="close-menu"><i class="fa-regular fa-xmark"></i></span>
 							<nav id="cssmenu">										
 								<ul class="open-detail-menu" style="">
-									<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Home</a>
-										<ul class="sub-back-wrap" style="">
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/index.html">Home 1</a></li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/homepage2.html">Home 2</a></li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/homepage3.html">Home 3</a></li>
-										</ul>
+									<li class=""><a href="index.html">Home</a>
+
+									</li>
+									<li><a href="about.html" >About us</a>
 									</li>
 									<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Menu</a>
 										<ul class="sub-back-wrap" style="">
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Menu List</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-1.html">Menu List 1</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-2.html">Menu List 2</a></li>
-												</ul>
+											<li class="has-sub"><span class="submenu-button"></span><a href="flames_menu_v08.pdf">Food Menu</a>
+
 											</li>
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Menu Tab</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-3.html">Menu Tab 1</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-4.html">Menu Tab 2</a></li>
-												</ul>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-5.html">Menu Section</a>
-											</li>
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Menu Grid</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-6.html">Menu Grid 1</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-7.html">Menu Grid 2</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/menupage-8.html">Menu Grid 2</a></li>
-												</ul>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-shop.html">Single Shop</a>
-											</li>
-										</ul>
-									</li>
-									<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Blog</a>
-										<ul class="sub-back-wrap" style="">
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Blog Standard</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-1.html">Blog Standard</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-2.html">Blog Standard: Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-3.html">Blog Standard: Left Sidebar</a></li>
-												</ul>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-4.html">Blog List</a>
-											</li>
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Blog Grid</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-5.html">Grid 1 + 2 Columns</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-6.html">Grid 2 + 3 Columns</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-7.html">Grid 3 + 3 Columns</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-8.html">Grid4 + 2 Columns + Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-9.html">Grid4 + 2 Columns + Left Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-10.html">Grid5 + 2 Columns + Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-11.html">Grid5 + 2 Columns + Left Sidebar</a></li>
-												</ul>
-											</li>
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Blog Masonry</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-12.html">Blog Masonry 1</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/blogpage-13.html">Blog Masonry 2</a></li>
-												</ul>
-											</li>
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Single Blog</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage1.html">Blog Standard: Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage6.html">Blog Standard: Left Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage2.html">Quote: Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage7.html">Quote: Left Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage3.html">Link: Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage8.html">Link: Left Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage4.html">Slider: Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage9.html">Slider: Left Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage5.html">Video: Right Sidebar</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-blogpage10.html">Video: Left Sidebar</a></li>
-												</ul>
+											<li class="has-sub"><span class="submenu-button"></span><a href="Flames_drinks_v01.pdf">Drinks Menu</a>
 											</li>
 
 										</ul>
 									</li>
-									<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Pages</a>
-										<ul class="sub-back-wrap" style="">
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Our Chefs</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/chefspage1.html">Our Chefs 1</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/chefspage2.html">Our Chefs 2</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/chefspage3.html">Our Chefs 3</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/single-chefs-deatail-page.html">Single Chefs Details</a></li>
-												</ul>
-											</li>
-											<li class="has-sub"><span class="submenu-button"></span><a href="javascript:void(0);">Reservation</a>
-												<ul style="">
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/reservation-1.html">Reservation 1</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/reservation-2.html">Reservation 2</a></li>
-													<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/reservation-3.html">Reservation 3</a></li>
-												</ul>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/historypage.html">Our History</a>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/404-error.html">404 Error</a>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/comming-soon.html">Coming Soon</a>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/cart-view.html">Cart View</a>
-											</li>
-											<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/checkout-page.html">Checkout</a>
-											</li>
-										</ul>
+
+									<li><a href="reservation.html" >Book a Table</a>
+									<li><a href="gallery.html" >Gallery</a>
 									</li>
-									<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/about-us.html">About us</a>
-									</li>
-									<li><a href="https://up2client.com/envato/bermiz-restaurant/main-file/contact-us.html">Contact us</a>
+									<li><a href="contact.html">Contact us</a>
 									</li>
 								</ul>
 							</nav>
@@ -324,119 +308,131 @@
 				</div>
 				<div class="header-cart-sec">
 					<div class="mobile-menu-icon">
-						<a data-bs-toggle="collapse" href="https://up2client.com/envato/bermiz-restaurant/main-file/contact-us.html#navbarSupportedmobile" role="button">
+						<a data-bs-toggle="collapse" href="#navbarSupportedmobile" role="button">
 							<i class="fa-solid fa-bars"></i>
 						</a>	
 					</div>
 				<div class="header2-cart-section">
-					<div>
-						<a href="https://wa.me/441877360322" target="_blank" class="cart-badge">
-							<img src="./contact_files/img/whatsapp.png" style="height: 80px;" alt="WhatsApp Icon">
+					<div class="header-cart-sec-first">
+						<a href=""
+							class="cart-badge">
+							<img src="./index_files/img/index_img/whatsapp (2).svg" style="height: 35px;"
+								alt="cart-icon">
 						</a>
 					</div>
 				</div>
 				</div>
 			</div>
 		</header>
-		<!-- Header Section End -->
-		<!--Header Section Start -->
-		<section id="menupage-1-section">
-			<div class="contact-us-img">
-				<div class="menupage-1-overlay"></div>
-				<div class="menupage-1-conten">
-					<h1 class="menupage-1-hero-txt1 wow fadeInDown" data-wow-duration="1s" data-wow-delay="2.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 2.5s; animation-name: fadeInDown;">Contact Us</h1>
-				</div>
-			</div>
-			<div class="breadcrumb-section">
-				<div class="container">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="https://up2client.com/envato/bermiz-restaurant/main-file/index.html">
-								<span class="home-icon">
-									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<mask id="mask0_564_5237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-											<rect width="24" height="24" fill="white"></rect>
-										</mask>
-										<g mask="url(#mask0_564_5237)">
-											<path d="M9.15722 20.7714V17.7047C9.1572 16.9246 9.79312 16.2908 10.581 16.2856H13.4671C14.2587 16.2856 14.9005 16.9209 14.9005 17.7047V17.7047V20.7809C14.9003 21.4432 15.4343 21.9845 16.103 22H18.0271C19.9451 22 21.5 20.4607 21.5 18.5618V18.5618V9.83784C21.4898 9.09083 21.1355 8.38935 20.538 7.93303L13.9577 2.6853C12.8049 1.77157 11.1662 1.77157 10.0134 2.6853L3.46203 7.94256C2.86226 8.39702 2.50739 9.09967 2.5 9.84736V18.5618C2.5 20.4607 4.05488 22 5.97291 22H7.89696C8.58235 22 9.13797 21.4499 9.13797 20.7714V20.7714" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-										</g>
-									</svg>
-								</span>Home
-							</a>
-						</li>
-						<li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-					</ol>
-				</div>
-			</div>
-			<div class="menupage1-boder"></div>
-		</section>
-		<!-- Header Section Start -->
-		<!-- Contact  Section Start -->
-		<section id="contact-us-page">
-			<div class="container ptb-100 line ">
-				<span class="line-3"></span>
-				<span class="line-4"></span>
-				<span class="line-5"> </span>
-				<div class="about-us-page-full">
-					<div class="about-us-left">
-						<form class="about-us-form">
-							<div class="about-us-form-top">
-								<h2 class="about-us-txt1">Got Any Questions?</h2>
-								<p class="about-us-txt2">Use the form below to get in touch with the support team</p>
-							</div>
-							<div class="about-us-form-bottom">
-								<div class="single-input-form-about-us">
-									<input type="text" name="name" placeholder="Name" class="about-us-input-custom name-icon">
-								</div>
-								<div class="single-input-form-about-us">
-									<input type="email" name="email" placeholder="Email Address" class="about-us-input-custom email-icon">
-								</div>
-								<div class="single-input-form-about-us">
-									<input type="tel" name="number" placeholder="Phone Number" class="about-us-input-custom mobile-icon">
-								</div>
-								<div class="single-input-form-about-us">
-									<textarea name="comment" placeholder="Message" class="about-us-message message-icon"></textarea>
-								</div>
-								<div class="send-message-btn">
-									<a href="https://up2client.com/envato/bermiz-restaurant/main-file/contact-us.html#">Send Your Message</a>
-								</div>
-							</div>
-						</form>
+			<!-- Header Section End -->
+			<!--Header Section Start -->
+			<section id="menupage-1-section">
+				<div class="contact-us-img">
+					<div class="menupage-1-overlay"></div>
+					<div class="menupage-1-conten">
+						<h1 class="menupage-1-hero-txt1 wow fadeInDown" data-wow-duration="1s" data-wow-delay="2.5s"
+							style="visibility: visible; animation-duration: 1s; animation-delay: 2.5s; animation-name: fadeInDown;">
+							Contact Us</h1>
 					</div>
-					<div class="about-us-right">
-						<div class="about-us-right-full">
-							<div class="about-first-img">
-								<img src="./contact_files/img/contact-1.png" alt="item-img" class="img-fluid">
-							</div>
-							<div class="about-second-img">
-								<img src="./contact_files/img/contact-2.png" alt="item-img" class="img-fluid">
+				</div>
+				<div class="breadcrumb-section">
+					<div class="container">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="index.html">
+									<span class="home-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<mask id="mask0_564_5237" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+												x="0" y="0" width="24" height="24">
+												<rect width="24" height="24" fill="white"></rect>
+											</mask>
+											<g mask="url(#mask0_564_5237)">
+												<path
+													d="M9.15722 20.7714V17.7047C9.1572 16.9246 9.79312 16.2908 10.581 16.2856H13.4671C14.2587 16.2856 14.9005 16.9209 14.9005 17.7047V17.7047V20.7809C14.9003 21.4432 15.4343 21.9845 16.103 22H18.0271C19.9451 22 21.5 20.4607 21.5 18.5618V18.5618V9.83784C21.4898 9.09083 21.1355 8.38935 20.538 7.93303L13.9577 2.6853C12.8049 1.77157 11.1662 1.77157 10.0134 2.6853L3.46203 7.94256C2.86226 8.39702 2.50739 9.09967 2.5 9.84736V18.5618C2.5 20.4607 4.05488 22 5.97291 22H7.89696C8.58235 22 9.13797 21.4499 9.13797 20.7714V20.7714"
+													stroke="white" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round"></path>
+											</g>
+										</svg>
+									</span>Home
+								</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+						</ol>
+					</div>
+				</div>
+				<div class="menupage1-boder"></div>
+			</section>
+			<!-- Header Section Start -->
+			<!-- Contact  Section Start -->
+			<section id="contact-us-page">
+				<div class="container ptb-100 line ">
+					<span class="line-3"></span>
+					<span class="line-4"></span>
+					<span class="line-5"> </span>
+					<div class="about-us-page-full">
+						<div class="about-us-left">
+							<form class="about-us-form">
+								<div class="about-us-form-top">
+									<h2 class="about-us-txt1">Got Any Questions?</h2>
+									<p class="about-us-txt2">Use the form below to get in touch with the support team
+									</p>
+								</div>
+								<div class="about-us-form-bottom">
+									<div class="single-input-form-about-us">
+										<input type="text" name="name" placeholder="Name"
+											class="about-us-input-custom name-icon">
+									</div>
+									<div class="single-input-form-about-us">
+										<input type="email" name="email" placeholder="Email Address"
+											class="about-us-input-custom email-icon">
+									</div>
+									<div class="single-input-form-about-us">
+										<input type="tel" name="number" placeholder="Phone Number"
+											class="about-us-input-custom mobile-icon">
+									</div>
+									<div class="single-input-form-about-us">
+										<textarea name="comment" placeholder="Message"
+											class="about-us-message message-icon"></textarea>
+									</div>
+									<div class="send-message-btn">
+										<a
+											href="">Send
+											Your Message</a>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="about-us-right">
+							<div class="about-us-right-full">
+								<div class="about-first-img">
+									<img src="./contact_files/img/contact-1.png" alt="item-img" class="img-fluid">
+								</div>
+								<div class="about-second-img">
+									<img src="./contact_files/img/contact-2.png" alt="item-img" class="img-fluid">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</section>
+			<!-- Contact  Section End -->
+			<!-- Map Section Start -->
+			<div class="map-section-about-us">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.5552737948886!2d-3.9432634840732964!3d56.119591180652176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488862ea7fb98c5f%3A0x6081a0a313c6af75!2s50%20Upper%20Craigs%2C%20Stirling%20FK8%202DS%2C%20UK!5e0!3m2!1sen!2sin!4v1720200000000!5m2!1sen!2sin"
+					width="1920" height="690" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
 			</div>
-		</section>
-		<!-- Contact  Section End -->
-		<!-- Map Section Start -->
-<div class="map-section-about-us">
-	<iframe 
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.5552737948886!2d-3.9432634840732964!3d56.119591180652176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488862ea7fb98c5f%3A0x6081a0a313c6af75!2s50%20Upper%20Craigs%2C%20Stirling%20FK8%202DS%2C%20UK!5e0!3m2!1sen!2sin!4v1720200000000!5m2!1sen!2sin" 
-		width="1920" 
-		height="690" 
-		style="border:0;" 
-		allowfullscreen="" 
-		loading="lazy" 
-		referrerpolicy="no-referrer-when-downgrade">
-	</iframe>
-</div>
 
-		<!-- Map Section End -->
+			<!-- Map Section End -->
 		<!-- Footer Section Start -->
 		<footer id="menupage-1-footer-sec" class="bg-col">
 			<div class="container">
 				<div class="home2-footer-sec-full">
 					<div class="home2-footer-top">
-						<img src="./contact_files/img/new-logo.png" style="height: 70px;" alt="footer-logo">
+						<img src="./index_files/img/index_img/new-logo.png" style="height: 70px;" alt="footer-logo">
 					</div>
 					<div class="home2-footer-bottom">
 						<h3 class="d-none">Footer</h3>
@@ -546,20 +542,22 @@
 									05:30 pm - 10:30 pm (Dinner)</p>
 							</div>
 							<div class="home2-footer-details">
-								<h4 class="home2-footer-txt1">CONTACT US</h4>
-								<p class="home2-footer-txt">
+								<h4 class="home2-footer-txt1 mt-1">CONTACT US</h4>
+
+								<p class="home2-footer-txt"><a href="tel:1300748133"><i class="fa-solid fa-phone"
+											style="color:#ffde9f; font-size: 1.3rem;"></i> <span style="color: #99a9ad ; font-size: 1.1rem;">+441877360322</span>
+									</a></p>
+								<p class="home2-footer-txt mt-1"><a href="mailto:flames@skyeforge.co.uk"><i
+											class="fa-solid fa-envelopes-bulk"
+											style="color:#ffde9f; font-size: 1.3rem;"></i> 
+											<span style="color: #99a9ad; font-size: 1.1rem;" >flames@skyeforge.co.uk</span> </a>
+								</p>
+																<p class="home2-footer-txt mt-1">
 									<a href="">
 										<i class="fa-solid fa-location-dot"
 											style="color:#ffde9f; font-size: 1.3rem;"></i>
-										50 Upper Craigs, Stirling FK8 2DS, United Kingdom
+										<span style="color: #99a9ad;   font-size: 1.1rem;">50 Upper Craigs, Stirling FK8 2DS, UK</span>
 									</a>
-								</p>
-								<p class="home2-footer-txt"><a href="tel:1300748133"><i class="fa-solid fa-phone"
-											style="color:#ffde9f; font-size: 1.3rem;"></i>+441877360322
-									</a></p>
-								<p class="home2-footer-txt"><a href="mailto:flames@skyeforge.co.uk"><i
-											class="fa-solid fa-envelopes-bulk"
-											style="color:#ffde9f; font-size: 1.3rem;"></i> flames@skyeforge.co.uk </a>
 								</p>
 							</div>
 						</div>
@@ -588,18 +586,29 @@
 				</div>
 			</div>
 		</footer>
+
+		<style>
+			@media (max-width: 767px) {
+    .copyright-right{
+        display: none !important;
+    }
+}
+		</style>
+	
 		<!-- Footer Section End -->
 
-		<!--Scroll Top to Bottom Section Start -->
-		<div class="scroll-top" data-scroll="up" style="display: none;">		
+			<!--Scroll Top to Bottom Section Start -->
+			<div class="scroll-top" data-scroll="up" style="display: none;">
+			</div>
+			<!--Scroll Top to Bottom Section End -->
 		</div>
-		<!--Scroll Top to Bottom Section End -->
-	</div>
-	<script src="./contact_files/js/jquery-min-3.6.0.js.download"></script>
-	<script src="./contact_files/js/slick.min.js.download"></script>
-	<script src="./contact_files/js/bootstrap.bundle.min.js.download"></script>
-	<script src="./contact_files/js/aos.js.download"></script>
-	<script src="./contact_files/js/wow.min.js.download"></script>
-	<script src="./contact_files/js/custom.js.download"></script>
+		<script src="./contact_files/js/jquery-min-3.6.0.js.download"></script>
+		<script src="./contact_files/js/slick.min.js.download"></script>
+		<script src="./contact_files/js/bootstrap.bundle.min.js.download"></script>
+		<script src="./contact_files/js/aos.js.download"></script>
+		<script src="./contact_files/js/wow.min.js.download"></script>
+		<script src="./contact_files/js/custom.js.download"></script>
 
-</body></html>
+</body>
+
+</html>
