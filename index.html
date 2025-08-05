@@ -328,12 +328,25 @@
 						</a>
 					</div>
 
-					<!-- ✅ CSS: Add in your <style> or CSS file -->
+					
 							<style>
-								/* Hide submenus by default */
+								
 								#cssmenu ul.sub-back-wrap {
 									display: none;
 								}
+								
+								.logo-img {
+								height: 80px;
+								}
+
+								
+								@media (max-width: 768px) {
+								.logo-img {
+									height: 100px !important;  /* Change this to any height you want for mobile */
+									width: 130px !important; 
+								}
+								}
+
 							</style>
 
 					<!-- ✅ HTML -->
@@ -448,7 +461,7 @@
 				<div class="header2-logo">
 					<div class="header2-logo-sec">
 						<a href="">
-							<img src="./index_files/img/index_img/flames4.png" style="height: 80px;" alt="logo-img">
+							<img src="./index_files/img/index_img/flames4.png" class="logo-img" alt="logo-img">
 						</a>
 					</div>
 				</div>
@@ -465,13 +478,22 @@
 			</div>
 		</header>
 		<!-- Header Section End -->
+		 <style>
+			@media (max-width: 1024px) {
+  .home2-hero-txt1 {
+    font-size: 58px; /* or whatever smaller size you prefer */
+	line-height: 1.4;
+  }
+}
+
+		 </style>
 		<!-- Hero Section Start -->
-		<section id="home2-hero-section">
+		<section id="home2-hero-section" >
 			<div class="homepage2-hero-overlay"></div>
 			<div class="container ">
-				<div class="home2-hero-section-full">
+				<div class="home2-hero-section-full" style="margin-top: -2rem;">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-lg-6 col-12">
 							<div class="home2-hero-top-sec">
 								<h1 class="home2-hero-txt1 wow fadeInDown" data-wow-duration="1s" data-wow-delay="3.5s"
 									style="visibility: visible; animation-duration: 1s; animation-delay: 3s; animation-name: fadeInDown;">
@@ -615,6 +637,7 @@
 					max-width: 100%;
 					margin-bottom: 30px;
 				}
+				
 			}
 
 			@media only screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3),
@@ -2593,7 +2616,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			<div class="container">
 				<div class="home2-footer-sec-full">
 					<div class="home2-footer-top">
-						<img src="./index_files/img/index_img/new-logo.png" style="height: 70px;" alt="footer-logo">
+						<img src="./index_files/img/index_img/flames4.png" style="height: 70px;" alt="footer-logo">
 					</div>
 					<div class="home2-footer-bottom">
 						<h3 class="d-none">Footer</h3>
