@@ -485,13 +485,25 @@
 	line-height: 1.4;
   }
 }
+@media (min-width: 992px) { /* For laptops and up */
+  .laptop-margin {
+    margin-top: -2rem;
+  }
+}
+
+@media (max-width: 991px) { /* For tablets and phones */
+  .laptop-margin {
+    margin-top: 0; /* or default value */
+  }
+}
+
 
 		 </style>
 		<!-- Hero Section Start -->
 		<section id="home2-hero-section" >
 			<div class="homepage2-hero-overlay"></div>
 			<div class="container ">
-				<div class="home2-hero-section-full" style="margin-top: -2rem;">
+				<div class="home2-hero-section-full laptop-margin" >
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="home2-hero-top-sec">
