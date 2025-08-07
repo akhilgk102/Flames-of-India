@@ -335,7 +335,7 @@
 				<div class="container">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">
-							<a href="https://up2client.com/envato/bermiz-restaurant/main-file/index.html">
+							<a href="./index.html">
 								<span class="home-icon">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<mask id="mask0_564_5237" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -356,68 +356,136 @@
 		</section>
 		<!-- Hero Section End -->
 		<!-- Booking Section Start -->
-		<section id="reservation1-sec">
-			<div class="container ptb-100 line">
-				<span class="line-3"></span>
-				<span class="line-4"></span>
-				<span class="line-5"> </span>
-				<div class="reservation-sec-full wow fadeInUp" data-wow-duration="1s" data-wow-delay="3s" style="visibility: visible; animation-duration: 1s; animation-delay: 3s; animation-name: fadeInUp;">
-					<div class="reser-top">
-						<p class="reser-txt1-menu1"><span class="pr-10"><img src="./reservation_files/img/yellow-star.png" alt="yellow-star"></span>RESERVATION<span class="pf-10"><img src="./reservation_files/img/yellow-star.png" alt="yellow-star"></span></p>
-						<h2 class="reser-txt2-menu1">Book A Table</h2>
-						<p class="reser-txt3-menu1">You can Call Us directly at <a href="tel:+441877360322"><span class="menupage1-no">+441877360322</span></a></p>
-					</div>
-					<div class="reser-bottom-sec">
-						<form class="menupage1-form">
-							<div class="form-menupage1">
-								<div class="single-input-form-menupage1">
-									<input type="text" name="name" placeholder="Full Name" class="menupage1-form-custom name-icon" fdprocessedid="o4q8y">
-								</div>
-								<div class="single-input-form-menupage1">
-									<input type="tel" name="phone" placeholder="Phone " class="menupage1-form-custom mobile-icon" fdprocessedid="cd1m6g">
-								</div>
-								<div class="single-input-form-menupage1">
-									<select name="persons" class="menupage1-form-custom arrow-icon" fdprocessedid="4zhee">
-										<option>1 Person</option>
-										<option>2 Persons</option>
-										<option>3 Persons</option>
-										<option>4 Persons</option>
-										<option>5 Persons</option>
-										<option>6 Persons</option>
-										<option>7 Persons</option>
-									</select>
-								</div>
-								<div class="single-input-form-menupage1 ">
-									<input type="text" id="datepicker" autocomplete="off" placeholder="dd/mm/yy" class="menupage1-form-custom arrow-icon hasDatepicker" fdprocessedid="162cbc">
-								</div>
-								<div class="single-input-form-menupage1">
-									<select name="persons" class="menupage1-form-custom arrow-icon" fdprocessedid="vqg0ab">
-										<option>08:00 am</option>
-										<option>09:00 am</option>
-										<option>10:00 am</option>
-										<option>11:00 am</option>
-										<option>12:00 pm</option>
-										<option>01:00 pm</option>
-										<option>02:00 pm</option>
-										<option>03:00 pm</option>
-										<option>04:00 pm</option>
-										<option>05:00 pm</option>
-										<option>06:00 pm</option>
-										<option>07:00 pm</option>
-										<option>08:00 pm</option>
-										<option>09:00 pm</option>
-										<option>10:00 pm</option>
-									</select>
-								</div>
-							</div>
-							<div class="menupage-1-book-now-btn">
-								<a href="javascript:void(0)">Book Now</a>
-							</div>
-						</form>
-					</div>
-				</div>
+<section id="reservation1-sec">
+	<div class="container ptb-100 line">
+		<span class="line-3"></span>
+		<span class="line-4"></span>
+		<span class="line-5"> </span>
+		<div class="reservation-sec-full wow fadeInUp" data-wow-duration="1s" data-wow-delay="3s" style="visibility: visible; animation-duration: 1s; animation-delay: 3s; animation-name: fadeInUp;">
+			<div class="reser-top">
+				<p class="reser-txt1-menu1"><span class="pr-10"><img src="./reservation_files/img/yellow-star.png" alt="yellow-star"></span>RESERVATION<span class="pf-10"><img src="./reservation_files/img/yellow-star.png" alt="yellow-star"></span></p>
+				<h2 class="reser-txt2-menu1">Book A Table</h2>
+				<p class="reser-txt3-menu1">You can Call Us directly at <a  href="tel:+441877360322"><span class="menupage1-no">+441877360322</span></a></p>
 			</div>
-		</section>
+			<div class="reser-bottom-sec">
+				<form class="menupage1-form" id="reservationForm" action="https://formspree.io/f/xpwlowoo" method="POST">
+					<!-- Add hidden input to ensure JSON response -->
+					<input type="hidden" name="_format" value="json">
+					<div class="form-menupage1">
+						<div class="single-input-form-menupage1">
+							<input type="text" name="fullname" placeholder="Full Name" class="menupage1-form-custom name-icon" fdprocessedid="o4q8y" required>
+						</div>
+						<div class="single-input-form-menupage1">
+							<input type="tel" name="phone" placeholder="Phone " class="menupage1-form-custom mobile-icon" fdprocessedid="cd1m6g" required>
+						</div>
+						<div class="single-input-form-menupage1">
+							<select name="persons" class="menupage1-form-custom arrow-icon" fdprocessedid="4zhee" required>
+								<option value="">Select Persons</option>
+								<option value="1">1 Person</option>
+								<option value="2">2 Persons</option>
+								<option value="3">3 Persons</option>
+								<option value="4">4 Persons</option>
+								<option value="5">5 Persons</option>
+								<option value="6">6 Persons</option>
+								<option value="7">7 Persons</option>
+							</select>
+						</div>
+						<div class="single-input-form-menupage1 ">
+							<input type="date" name="date" id="datepicker" autocomplete="off" placeholder="dd/mm/yy" class="menupage1-form-custom arrow-icon hasDatepicker" fdprocessedid="162cbc" required>
+						</div>
+						<div class="single-input-form-menupage1">
+							<select name="time" class="menupage1-form-custom arrow-icon" fdprocessedid="vqg0ab" required>
+								<option value="">Select Time</option>
+								<option value="08:00 am">08:00 am</option>
+								<option value="09:00 am">09:00 am</option>
+								<option value="10:00 am">10:00 am</option>
+								<option value="11:00 am">11:00 am</option>
+								<option value="12:00 pm">12:00 pm</option>
+								<option value="01:00 pm">01:00 pm</option>
+								<option value="02:00 pm">02:00 pm</option>
+								<option value="03:00 pm">03:00 pm</option>
+								<option value="04:00 pm">04:00 pm</option>
+								<option value="05:00 pm">05:00 pm</option>
+								<option value="06:00 pm">06:00 pm</option>
+								<option value="07:00 pm">07:00 pm</option>
+								<option value="08:00 pm">08:00 pm</option>
+								<option value="09:00 pm">09:00 pm</option>
+								<option value="10:00 pm">10:00 pm</option>
+							</select>
+						</div>
+					</div>
+					<div class="menupage-1-book-now-btn">
+						<button type="submit" class="submit-btn">Book Now</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+					.menupage-1-book-now-btn .submit-btn {
+						width: 100%;
+						height: 64px;
+						background: #FFDE9F;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: #0B1315;
+						text-align: center;
+						font-size: 18px;
+						font-family: Lexend;
+						font-weight: 500;
+						line-height: 24px;
+						border: none;
+						cursor: pointer;
+						text-decoration: none;
+						border-radius: 0;
+					}
+			
+					.menupage-1-book-now-btn .submit-btn:hover {
+						border: 1px solid #FFDE9F;
+						background: transparent;
+						color: #ffde9f;
+					}
+
+
+
+
+</style>
+
+<script>
+document.getElementById('reservationForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+   
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+   
+    try {
+        const response = await fetch('https://formspree.io/f/xpwlowoo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+       
+        if (response.ok) {
+            alert('Booking submitted successfully! We will contact you shortly to confirm your reservation.');
+            this.reset();
+        } else {
+            alert('Error submitting booking. Please try again.');
+        }
+    } catch (error) {
+        alert('Error submitting booking. Please try again.');
+        console.error('Error:', error);
+    }
+});
+</script>
 		<!-- Booking Section End -->
 
 
@@ -465,7 +533,7 @@
 								<p class="visit-no-txt">T:<a href="tel:+441877360322" class="Visit-no">+441877360322</a></p>
 							</div>
 							<div class="direction-btn">
-								<a href="https://up2client.com/envato/bermiz-restaurant/main-file/contact-us.html">Get Directions</a>
+								<a href="./contact-us.html">Get Directions</a>
 							</div>
 						</div>
 					</div>

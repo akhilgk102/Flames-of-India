@@ -1,9 +1,4 @@
-/*------------------------------------------------------------------
-Project:Bermiz
-Author: The_Krishna       
-Last change: 12 June, 2023  
-Primary use: Restarant Template 
--------------------------------------------------------------------*/
+
 
 /*----------------Table of contents Start---------------------------
 1.Default CSS
@@ -3024,7 +3019,6 @@ ul.has-sub-menu {
     padding-top: 100px;
 }
 .menupage1-no:hover{
-    text-decoration: underline;
 }
 .menupage1-form-custom{
     width: 370px;
@@ -3107,7 +3101,7 @@ p.reser-txt3-menu1 a {
     margin-right: auto;
     margin-top: 60px;
 }
-.menupage-1-book-now-btn a {
+.menupage-1-book-now-btn a button {
     color:#0B1315;
     text-align: center;
     font-size: 18px;

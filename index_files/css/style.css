@@ -1,9 +1,4 @@
-/*------------------------------------------------------------------
-Project:Bermiz
-Author: The_Krishna       
-Last change: 12 June, 2023  
-Primary use: Restarant Template 
--------------------------------------------------------------------*/
+
 
 /*----------------Table of contents Start---------------------------
 1.Default CSS
@@ -558,7 +553,7 @@ a.add-cart-bnt:hover{
 }
 .round-shape .white-bg {
     background: white;
-    width: 100px;
+    width: 95px;
     height: 100px;
     display: flex;
     align-items: center;

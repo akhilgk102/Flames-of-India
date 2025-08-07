@@ -365,57 +365,113 @@
 			</section>
 			<!-- Header Section Start -->
 			<!-- Contact  Section Start -->
-			<section id="contact-us-page">
-				<div class="container ptb-100 line ">
-					<span class="line-3"></span>
-					<span class="line-4"></span>
-					<span class="line-5"> </span>
-					<div class="about-us-page-full">
-						<div class="about-us-left">
-							<form class="about-us-form">
-								<div class="about-us-form-top">
-									<h2 class="about-us-txt1">Got Any Questions?</h2>
-									<p class="about-us-txt2">Use the form below to get in touch with the support team
-									</p>
-								</div>
-								<div class="about-us-form-bottom">
-									<div class="single-input-form-about-us">
-										<input type="text" name="name" placeholder="Name"
-											class="about-us-input-custom name-icon">
-									</div>
-									<div class="single-input-form-about-us">
-										<input type="email" name="email" placeholder="Email Address"
-											class="about-us-input-custom email-icon">
-									</div>
-									<div class="single-input-form-about-us">
-										<input type="tel" name="number" placeholder="Phone Number"
-											class="about-us-input-custom mobile-icon">
-									</div>
-									<div class="single-input-form-about-us">
-										<textarea name="comment" placeholder="Message"
-											class="about-us-message message-icon"></textarea>
-									</div>
-									<div class="send-message-btn">
-										<a
-											href="">Send
-											Your Message</a>
-									</div>
-								</div>
-							</form>
+<section id="contact-us-page">
+	<div class="container ptb-100 line ">
+		<span class="line-3"></span>
+		<span class="line-4"></span>
+		<span class="line-5"> </span>
+		<div class="about-us-page-full">
+			<div class="about-us-left">
+				<form class="about-us-form" id="contactForm" action="https://formspree.io/f/xyzpbkpy" method="POST">
+					<!-- Add hidden input to ensure JSON response -->
+					<input type="hidden" name="_format" value="json">
+					<div class="about-us-form-top">
+						<h2 class="about-us-txt1">Got Any Questions?</h2>
+						<p class="about-us-txt2">Use the form below to get in touch with the support team
+						</p>
+					</div>
+					<div class="about-us-form-bottom">
+						<div class="single-input-form-about-us">
+							<input type="text" name="name" placeholder="Name"
+								class="about-us-input-custom name-icon" required>
 						</div>
-						<div class="about-us-right">
-							<div class="about-us-right-full">
-								<div class="about-first-img">
-									<img src="./contact_files/img/contact-1.png" alt="item-img" class="img-fluid">
-								</div>
-								<div class="about-second-img">
-									<img src="./contact_files/img/contact-2.png" alt="item-img" class="img-fluid">
-								</div>
-							</div>
+						<div class="single-input-form-about-us">
+							<input type="email" name="email" placeholder="Email Address"
+								class="about-us-input-custom email-icon" required>
+						</div>
+						<div class="single-input-form-about-us">
+							<input type="tel" name="phone" placeholder="Phone Number"
+								class="about-us-input-custom mobile-icon" required>
+						</div>
+						<div class="single-input-form-about-us">
+							<textarea name="message" placeholder="Message"
+								class="about-us-message message-icon" required></textarea>
+						</div>
+						<div class="send-message-btn">
+							<button type="submit" class="submit-btn">Send Your Message</button>
 						</div>
 					</div>
+				</form>
+			</div>
+			<div class="about-us-right">
+				<div class="about-us-right-full">
+					<div class="about-first-img">
+						<img src="./contact_files/img/contact-1.png" alt="item-img" class="img-fluid">
+					</div>
+					<div class="about-second-img">
+						<img src="./contact_files/img/contact-2.png" alt="item-img" class="img-fluid">
+					</div>
 				</div>
-			</section>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.send-message-btn .submit-btn {
+		width: 100%;
+		height: 64px;
+		background: #FFDE9F;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #0B1315;
+		text-align: center;
+		font-size: 18px;
+		font-family: Lexend;
+		font-weight: 500;
+		line-height: 24px;
+		border: none;
+		cursor: pointer;
+		text-decoration: none;
+		border-radius: 0;
+	}
+
+	.send-message-btn .submit-btn:hover {
+		border: 1px solid #FFDE9F;
+		background: transparent;
+		color:#FFDE9F;
+	}
+</style>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+   
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+   
+    try {
+        const response = await fetch('https://formspree.io/f/xyzpbkpy', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+       
+        if (response.ok) {
+            alert('Message sent successfully! We will get back to you soon.');
+            this.reset();
+        } else {
+            alert('Error sending message. Please try again.');
+        }
+    } catch (error) {
+        alert('Error sending message. Please try again.');
+        console.error('Error:', error);
+    }
+});
+</script>
 			<!-- Contact  Section End -->
 			<!-- Map Section Start -->
 			<div class="map-section-about-us">

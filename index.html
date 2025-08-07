@@ -479,6 +479,10 @@
 		</header>
 		<!-- Header Section End -->
 		 <style>
+			input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Inverts color to white */
+}
+
 			@media (max-width: 1024px) {
   .home2-hero-txt1 {
     font-size: 58px; /* or whatever smaller size you prefer */
@@ -570,7 +574,7 @@
 									</select>
 								</div>
 								<div class="single-input-form-home2 ">
-									<input type="text" name="date" autocomplete="off" placeholder="dd/mm/yy"
+									<input type="date" name="date" autocomplete="off" placeholder="dd/mm/yy"
 										class="custom-input-home3-form custom-select2 hasDatepicker" required>
 								</div>
 			
@@ -600,8 +604,8 @@
 							</div>
 						</form>
 						<div class="open-table-home2">
-							<p class="home2-form-txt3">Booking request <a href="tel:+1(234)5678899"><span
-										class="home3-form-no">+441877360322
+							<p class="home2-form-txt3">Booking request <a href="tel:+441877360322"><span
+										class="home3-form-no" style="text-decoration: none;">+441877360322
 									</span></a> or fill out the order form
 							</p>
 						</div>
@@ -793,9 +797,9 @@
 									</div>
 									<div class="round-details-home2">
 										<div class="round-shape">
-											<img src="./index_files/img/index_img/round-txt-img.png" class="txt-img"
+											<img src="./index_files/img/index_img/flames-round.png" class="txt-img"
 												alt="round-img">
-											<img src="./index_files/img/index_img/round-img.png" class="white-bg"
+											<img src="./index_files/img/index_img/favicon.png" class="white-bg"
 												alt="round-img">
 										</div>
 									</div>
@@ -807,7 +811,7 @@
 										width="430px" alt="food-img" class="img-fluid">
 								</div>
 								<div class="explore-btn explore-btn2">
-									<a href="">Explore
+									<a href="./about.html">Explore
 										Us</a>
 								</div>
 							</div>
@@ -826,15 +830,15 @@
 						<p>Chinese Food</p>
 						<p aria-hidden="true">Kerala Food</p>
 						<p aria-hidden="true">South Indian</p>
+						<p aria-hidden="true">Arabian Food</p>
 						<p aria-hidden="true">Family Spot</p>
-						<p aria-hidden="true">Clean Space</p>
 					</div>
 					<div aria-hidden="true" class="marquee_group">
 						<p>Chinese Food</p>
 						<p>Kerala Food</p>
 						<p>South Indian</p>
+						<p>Arabian Food</p>
 						<p>Family Spot</p>
-						<p>Clean Space</p>
 					</div>
 				</div>
 			</div>
