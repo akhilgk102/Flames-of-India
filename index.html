@@ -56,8 +56,8 @@
 			</div>
 		</div>
 
-		<!-- Add this HTML right after your opening <body> tag -->
-		<div class="preloader" id="preloader">
+
+		<!-- <div class="preloader" id="preloader">
 
 
 			<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
@@ -69,7 +69,7 @@
 
 		</div>
 
-		<!-- Add this CSS to your stylesheet or in <style> tags in your <head> -->
+
 		<style>
 			.preloader {
 				position: fixed;
@@ -226,7 +226,7 @@
 			}
 		</style>
 
-		<!-- Add this JavaScript before your closing </body> tag -->
+
 		<script>
 			window.addEventListener('load', function () {
 				const preloader = document.getElementById('preloader');
@@ -241,7 +241,7 @@
 					}, 800);
 				}, 3500); // Adjust timing as needed
 			});
-		</script>
+		</script> -->
 
 		<!-- Header Section Start -->
 		<header id="homepage2-header2" class="fixed">
@@ -367,7 +367,7 @@
 								<nav id="cssmenu">
 									<ul class="open-detail-menu">
 										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About Us</a></li>
+										<li><a href="about.">About Us</a></li>
 
 										<li class="has-sub">
 											<a href="javascript:void(0);">Menu</a>
@@ -511,17 +511,17 @@
 					<div class="row">
 						<div class="col-lg-6 col-12 " >
 							<div class="home2-hero-top-sec">
-								<h1 class="home2-hero-txt1 wow fadeInDown" data-wow-duration="1s" data-wow-delay="3.5s"
-									style="visibility: visible; animation-duration: 1s; animation-delay: 3s; animation-name: fadeInDown;">
+								<h1 class="home2-hero-txt1 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s"
+									style="visibility: visible; animation-duration: 0.2s; animation-delay: 0.2s; animation-name: fadeInDown;">
 									Where every bite ignites.</h1>
-								<p class="home2-hero-txt2 wow fadeInDown" data-wow-duration="1.6s" data-wow-delay="4s"
-									style="visibility: visible; animation-duration: 1.6s; animation-delay: 3.1s; animation-name: fadeInDown;">
+								<p class="home2-hero-txt2 wow fadeInDown" data-wow-duration="0.3ss" data-wow-delay="0.3s"
+									style="visibility: visible; animation-duration: 0.3s; animation-delay: 0.3s; animation-name: fadeInDown;">
 									We have a proper passion for cooking. Love is the secret ingredient that makes all
 									our meals
 									taste better and magical.</p>
-								<div class="dicover-menu-btn-home2 wow fadeInDown" data-wow-duration="1.8s"
-									data-wow-delay="4.5s"
-									style="visibility: visible; animation-duration: 1.8s; animation-delay: 3.2s; animation-name: fadeInDown;">
+								<div class="dicover-menu-btn-home2 wow fadeInDown" data-wow-duration="0.4s"
+									data-wow-delay="0.4s"
+									style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.4s; animation-name: fadeInDown;">
 									<a href="">Discover Menu</a>
 								</div>
 							</div>
@@ -577,8 +577,75 @@
 									<input type="date" name="date" autocomplete="off" placeholder="dd/mm/yy"
 										class="custom-input-home3-form custom-select2 hasDatepicker" required>
 								</div>
+<!-- Font Awesome (Clock Icon) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Hide browser default icon visually but keep it functional */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Remove any background icons from custom styles */
+.custom-select2.hasDatepicker {
+    background-image: none !important;
+}
+
+/* Input + icon container */
+.single-input-form-home2 {
+    position: relative;
+}
+
+/* Font Awesome clock icon styling */
+.single-input-form-home2 .fa-clock {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* white icon */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Space for icon inside the input */
+.single-input-form-home2 input {
+    padding-right: 35px;
+}
+</style>
+
+<div class="single-input-form-home2">
+    <input type="text" id="booking-time" placeholder="Booking Time"
+           class="custom-input-home3-form custom-select2 hasDatepicker" required>
+    <i class="fa-solid fa-clock" id="clock-icon"></i>
+</div>
+
+<script>
+const timeInput = document.getElementById("booking-time");
+const clockIcon = document.getElementById("clock-icon");
+
+// Switch to time picker on focus
+timeInput.addEventListener("focus", function() {
+    this.type = 'time';
+});
+timeInput.addEventListener("blur", function() {
+    if (!this.value) this.type = 'text';
+});
+
+// Click icon to open time picker
+clockIcon.addEventListener("click", function() {
+    timeInput.type = 'time';
+    timeInput.showPicker && timeInput.showPicker(); // opens native time picker if supported
+    timeInput.focus();
+});
+</script>
+
 			
-								<div class="single-input-form-home2 ">
+								<!-- <div class="single-input-form-home2 ">
 									<select name="time" class="custom-select custom-select2" fdprocessedid="shz2ha" required>
 										<option value="">Select Time</option>
 										<option value="08:00 am">08:00 am</option>
@@ -597,7 +664,7 @@
 										<option value="09:00 pm">09:00 pm</option>
 										<option value="10:00 pm">10:00 pm</option>
 									</select>
-								</div>
+								</div> -->
 								<div class="home2-form-btn">
 									<button type="submit" class="submit-btn">Book A Table</button>
 								</div>
@@ -827,14 +894,12 @@
 				<h2 class="d-none">Ticker Section</h2>
 				<div class="marquee">
 					<div class="marquee_group">
-						<p>Chinese Food</p>
 						<p aria-hidden="true">Kerala Food</p>
 						<p aria-hidden="true">South Indian</p>
 						<p aria-hidden="true">Arabian Food</p>
 						<p aria-hidden="true">Family Spot</p>
 					</div>
 					<div aria-hidden="true" class="marquee_group">
-						<p>Chinese Food</p>
 						<p>Kerala Food</p>
 						<p>South Indian</p>
 						<p>Arabian Food</p>
@@ -1291,7 +1356,7 @@
 
 
 <!-- Testimonial Section Start -->
-<section id="home2-testimonials-sec">
+<!-- <section id="home2-testimonials-sec">
     <div class="homepage2-testimo-overlay"></div>
     <div class="container">
         <div class="home2-testimonials-sec-full">
@@ -1338,7 +1403,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Testimonial Section End -->
 
 <style>
@@ -2880,7 +2945,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 								<li class="has-sub-main mobile">
 									<a class="dropdown-item"
-										href="flames_menu_v08.pdf">Food Menu</a>
+										href="menu.pdf">Food Menu</a>
 								</li>
 
 								<li class="has-sub-main mobile">
